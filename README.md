@@ -3,7 +3,7 @@
 svg로 프로그래밍과 관련된 icon을 만들어보는 저장소. 단순 취미 활동. svg연습
 
 - gif 추출 앱을 사용해서 동영상을 gif로 바꿨는데 프레임이 이상할 수도 있습니다.
-- svg파일을 html에 넣어서 실행해보면 좀 더 깔끌하게 보일 수 있습니다.
+- svg파일을 html에 넣어서 실행해보면 좀 더 깔끔하게 보일 수 있습니다.
 
 ### 언어
 
@@ -15,6 +15,6 @@ svg로 프로그래밍과 관련된 icon을 만들어보는 저장소. 단순 �
 
 <img src="https://github.com/qkrdmstlr3/svg-icon-animation/blob/master/react-icon/react-icon.gif" alt="react-icon" width="60" height="60" />
 
-### 등등
+### 미분류(어디 속하면 좋을까요??)
 
 <img src="https://github.com/qkrdmstlr3/svg-icon-animation/blob/master/raspberrypi-icon/raspberrypi-icon.gif" alt="raspberrypi-icon" width="60" height="60" />
