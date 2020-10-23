@@ -1,0 +1,161 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="graphql-icon">
+  <defs>
+    <style>
+      @keyframes circle-2-ani {
+        10% { transform: rotate(60deg); }
+        80% { transform: rotate(60deg); }
+        100% { transform: rotate(360deg); }
+      }
+      @keyframes circle-3-ani {
+        10% { transform: rotate(60deg); }
+        20% { transform: rotate(120deg); }
+        80% { transform: rotate(120deg); }
+        100% { transform: rotate(360deg); }
+      }
+      @keyframes circle-4-ani {
+        10% { transform: rotate(60deg); }
+        20% { transform: rotate(120deg); }
+        30% { transform: rotate(180deg); }
+        80% { transform: rotate(180deg); }
+        100% { transform: rotate(360deg); }
+      }
+      @keyframes circle-5-ani {
+        10% { transform: rotate(60deg); }
+        20% { transform: rotate(120deg); }
+        30% { transform: rotate(180deg); }
+        40% { transform: rotate(240deg) }
+        80% { transform: rotate(240deg); }
+        100% { transform: rotate(360deg); }
+      }
+      @keyframes circle-6-ani {
+        10% { transform: rotate(60deg); }
+        20% { transform: rotate(120deg); }
+        30% { transform: rotate(180deg); }
+        40% { transform: rotate(240deg); }
+        50% { transform: rotate(300deg); }
+        80% { transform: rotate(300deg); }
+        100% { transform: rotate(360deg); }
+      }
+
+      @keyframes line-1-ani {
+        0% { transform: scale(0); }
+        10% { transform: scale(1); }
+        80% { transform: scale(1); }
+      }
+      @keyframes line-2-ani {
+        10% { transform: rotate(60deg) scale(0); }
+        20% { transform: rotate(60deg) scale(1); }
+        80% { transform: rotate(60deg) scale(1); }
+      }
+      @keyframes line-3-ani {
+        20% { transform: rotate(120deg) scale(0); }
+        30% { transform: rotate(120deg) scale(1); }
+        80% { transform: rotate(120deg) scale(1); }
+      }
+      @keyframes line-4-ani {
+        30% { transform: rotate(180deg) scale(0); }
+        40% { transform: rotate(180deg) scale(1); }
+        80% { transform: rotate(180deg) scale(1); }
+      }
+      @keyframes line-5-ani {
+        40% { transform: rotate(240deg) scale(0); }
+        50% { transform: rotate(240deg) scale(1); }
+        80% { transform: rotate(240deg) scale(1); }
+      }
+      @keyframes line-6-ani {
+        50% { transform: rotate(300deg) scale(0); }
+        60% { transform: rotate(300deg) scale(1); }
+        80% { transform: rotate(300deg) scale(1); }
+      }
+
+      @keyframes triangle-ani {
+        60% { transform: scale(0); }
+        80% { transform: scale(1); }
+      }
+      #graphql-icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100px;
+        height: 100px;
+        background: white;
+      }
+      .circle {
+        transform-origin: 50px 50px;
+        fill: #DE34A6;
+      }
+      .circle-2 {
+        animation: circle-2-ani 5s infinite;
+      }
+      .circle-3 {
+        animation: circle-3-ani 5s infinite;
+      }
+      .circle-4 {
+        animation: circle-4-ani 5s infinite;
+      }
+      .circle-5 {
+        animation: circle-5-ani 5s infinite;
+      }
+      .circle-6 {
+        animation: circle-6-ani 5s infinite;
+      }
+
+      .line {
+        transform-origin: 50px 50px;
+        stroke: #DE34A6;
+        stroke-width: 4;
+      }
+      .line-1 {
+        transform: scale(0);
+        animation: line-1-ani 5s infinite;
+      }
+      .line-2 {
+        transform: rotate(60deg) scale(0);
+        animation: line-2-ani 5s infinite;
+      }
+      .line-3 {
+        transform: rotate(120deg) scale(0);
+        animation: line-3-ani 5s infinite;
+      }
+      .line-4 {
+        transform: rotate(180deg) scale(0);
+        animation: line-4-ani 5s infinite;
+      }
+      .line-5 {
+        transform: rotate(240deg) scale(0);
+        animation: line-5-ani 5s infinite;
+      }
+      .line-6 {
+        transform: rotate(300deg) scale(0);
+        animation: line-6-ani 5s infinite;
+      }
+
+      .triangle {
+        transform-origin: 50px 50px;
+        stroke: #DE34A6;
+        stroke-width: 4;
+        transform: scale(0);
+        fill: transparent;
+        animation: triangle-ani 5s infinite;
+        stroke-linejoin: round;
+      }
+    </style>
+  </defs>
+  <circle class="circle" cx="50" cy="20" r="6"></circle>
+  <circle class="circle circle-2" cx="50" cy="20" r="6"></circle>
+  <circle class="circle circle-3" cx="50" cy="20" r="6"></circle>
+  <circle class="circle circle-4" cx="50" cy="20" r="6"></circle>
+  <circle class="circle circle-5" cx="50" cy="20" r="6"></circle>
+  <circle class="circle circle-6" cx="50" cy="20" r="6"></circle>
+
+  <line class="line line-1" x1="50" y1="20" x2="76.5" y2="35.5"></line>
+  <line class="line line-2" x1="50" y1="20" x2="76.5" y2="35.5"></line>
+  <line class="line line-3" x1="50" y1="20" x2="76.5" y2="35.5"></line>
+  <line class="line line-4" x1="50" y1="20" x2="76.5" y2="35.5"></line>
+  <line class="line line-5" x1="50" y1="20" x2="76.5" y2="35.5"></line>
+  <line class="line line-6" x1="50" y1="20" x2="76.5" y2="35.5"></line>
+
+  <path class="triangle" d="M 50 20 L 24 65 L 76 65 z" stroke="black" stroke-width="1"></path>
+  
+</svg>
