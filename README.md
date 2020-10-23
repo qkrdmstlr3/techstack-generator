@@ -14,3 +14,7 @@ svg로 프로그래밍과 관련된 icon을 만들어보는 저장소. 단순 �
 ### 라이브러리 & 프레임워크
 
 <img src="https://github.com/qkrdmstlr3/svg-icon-animation/blob/master/react-icon/react-icon.gif" alt="react-icon" width="60" height="60" />
+
+### 등등
+
+<img src="https://github.com/qkrdmstlr3/svg-icon-animation/blob/master/raspberrypi-icon/raspberrypi-icon.gif" alt="raspberrypi-icon" width="60" height="60" />
