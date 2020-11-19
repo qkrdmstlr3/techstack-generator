@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 916.000000 1280.000000">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000.000000 916.000000">
   <defs>
     <linearGradient id="icon-color"  x1="0%" y1="100%" x2="0%" y2="0%">
       <stop offset="0%" stop-color="#04F45F" />
@@ -6,25 +6,25 @@
     </linearGradient>
     <style>
       @keyframes icon-ani {
-        10% { transform: translate(-120px, 750px) scale(0.05, -0.05); }
+        10% { transform: translate(-40px, 750px) scale(0.05, -0.05); }
         25% {
-          transform: translate(70px, 600px) scale(0.05, -0.05);
+          transform: translate(150px, 600px) scale(0.05, -0.05);
         }
         40% {
-          transform: translate(90px, 730px) scale(0.05, -0.05);
+          transform: translate(170px, 730px) scale(0.05, -0.05);
         }
         60%, 100% {
-          transform: translate(250px, 590px) scale(0.05, -0.05);
+          transform: translate(330px, 590px) scale(0.05, -0.05);
         }
       }
       @keyframes text-ani {
-        10% { transform: translate(0, 0);}
+        10% { transform: translate(80px, 0);}
         25% {
-          transform: translate(190px, -150px);
+          transform: translate(270px, -150px);
         } 40% {
-          transform: translate(210px, -20px);
+          transform: translate(290px, -20px);
         } 60%, 100% {
-          transform: translate(370px, -160px);
+          transform: translate(450px, -160px);
         }
       }
       @keyframes path-ani {
@@ -34,13 +34,13 @@
         } 40% {
           stroke-dashoffset: 210;
         }
-        61%, 100% {
+        60%, 100% {
           stroke-dashoffset: 0;
         }
       }
       .icon {
         fill: url(#icon-color);
-        transform: translate(-120px, 750px) scale(0.05, -0.05);
+        transform: translate(-40px, 750px) scale(0.05, -0.05);
         stroke: none;
         animation: icon-ani 4s linear infinite;
       }
@@ -48,6 +48,7 @@
         fill: white;
         font-size: 300px;
         font-weight: bold;
+        transform: translate(80px, 0);
         animation: text-ani 4s linear infinite;
       }
       .path {
@@ -76,6 +77,6 @@
     511 -206 950 -420 1345 -96 177 -110 201 -196 330 -529 795 -1342 1367 -2266
     1594 -162 40 -206 48 -408 75 -279 38 -508 48 -745 30z"/>
   </g>
-  <text x="3%" y="37%" class="text">B</text>
-  <path class="path" d="M 114 698 L 302 550 L 322 680 L 482 540"></path>
+  <text x="3%" y="50%" class="text">B</text>
+  <path class="path" d="M 194 698 L 382 550 L 402 680 L 562 540"></path>
 </svg>
