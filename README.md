@@ -25,9 +25,9 @@ svg로 프로그래밍과 관련된 icon을 만들어보는 저장소. 단순 �
 
 ### WEB
 
-<img src="https://github.com/qkrdmstlr3/svg-icon-animation/blob/master/localhost-icon/localhost-icon.gif" alt="localhost-icon" width="120" height="60" />
+<img src="https://github.com/qkrdmstlr3/svg-icon-animation/blob/master/localhost-icon/localhost-icon.gif" alt="localhost-icon" width="180" height="60" />
 
 ### 기타
 
 <img src="https://github.com/qkrdmstlr3/svg-icon-animation/blob/master/raspberrypi-icon/raspberrypi-icon.gif" alt="raspberrypi-icon" width="60" height="60" />
-<img src="https://github.com/qkrdmstlr3/svg-icon-animation/blob/master/map-icon/map-icon.gif" alt="map-icon" width="120" height="60" />
+<img src="https://github.com/qkrdmstlr3/svg-icon-animation/blob/master/map-icon/map-icon.gif" alt="map-icon" width="120" height="120" />
