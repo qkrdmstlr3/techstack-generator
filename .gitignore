@@ -2,3 +2,6 @@ index.html
 .DS_Store
 
 java-icon
+node_modules/
+.cache/
+public

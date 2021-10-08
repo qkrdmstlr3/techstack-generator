@@ -1,0 +1,38 @@
+{
+  "name": "techstack-generator",
+  "version": "1.0.0",
+  "description": "techstack-generator",
+  "main": "index.js",
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qkrdmstlr3/techstack-generator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/qkrdmstlr3/techstack-generator/issues"
+  },
+  "homepage": "https://github.com/qkrdmstlr3/techstack-generator#readme",
+  "dependencies": {
+    "@emotion/react": "^11.4.1",
+    "@emotion/styled": "^11.3.0",
+    "gatsby": "^3.13.1",
+    "gatsby-plugin-emotion": "^6.14.0",
+    "gatsby-plugin-image": "^1.14.1",
+    "gatsby-plugin-manifest": "^3.14.0",
+    "gatsby-plugin-sharp": "^3.14.1",
+    "gatsby-plugin-sitemap": "^4.10.0",
+    "gatsby-source-filesystem": "^3.14.0",
+    "gatsby-transformer-sharp": "^3.14.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  }
+}
