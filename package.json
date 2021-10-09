@@ -30,9 +30,16 @@
     "gatsby-plugin-manifest": "^3.14.0",
     "gatsby-plugin-sharp": "^3.14.1",
     "gatsby-plugin-sitemap": "^4.10.0",
+    "gatsby-plugin-typescript": "^3.14.0",
     "gatsby-source-filesystem": "^3.14.0",
     "gatsby-transformer-sharp": "^3.14.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^16.10.3",
+    "@types/react": "^17.0.27",
+    "@types/react-dom": "^17.0.9",
+    "typescript": "^4.4.3"
   }
 }
