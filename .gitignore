@@ -5,3 +5,4 @@ java-icon
 node_modules/
 .cache/
 public
+coverage

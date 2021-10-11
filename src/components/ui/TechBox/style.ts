@@ -4,13 +4,8 @@ interface SelectedProps {
   selected: boolean;
 }
 
-export const Container = styled.div`
-  position: relative;
-  width: 100px;
-  height: 100px;
-`;
-
 export const Wrapper = styled.div<SelectedProps>`
+  position: relative;
   width: ${(props) => (props.selected ? '85px' : '100px')};
   height: ${(props) => (props.selected ? '85px' : '100px')};
   border-radius: 4px;

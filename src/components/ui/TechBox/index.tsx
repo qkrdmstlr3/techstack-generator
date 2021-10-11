@@ -8,8 +8,7 @@ interface TechBoxProps {
 
 function TechBox({ selected, number = 0 }: TechBoxProps) {
   return (
-    <Style.Container>
-      <Style.Wrapper selected={selected} />
+    <Style.Wrapper aria-label="techbox" selected={selected}>
       <Style.Cover selected={selected}>
         {selected && (
           <Style.NumberWrapper>
@@ -17,7 +16,7 @@ function TechBox({ selected, number = 0 }: TechBoxProps) {
           </Style.NumberWrapper>
         )}
       </Style.Cover>
-    </Style.Container>
+    </Style.Wrapper>
   );
 }
 
