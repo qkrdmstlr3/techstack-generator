@@ -21,7 +21,7 @@ function SettingInterval({ interval, changeInterval }: SettingIntervalProps) {
       />
       <Style.ExampleBox>
         <Style.Bar />
-        <Style.Line width={interval} />
+        <Style.Line aria-label="interval-line" width={interval} />
         <Style.Bar />
       </Style.ExampleBox>
     </Style.Container>
