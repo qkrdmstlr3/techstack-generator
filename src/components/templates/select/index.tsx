@@ -2,15 +2,19 @@ import React from 'react';
 import TechBox from '../../ui/TechBox';
 import * as Style from './style';
 
-interface TechType {
+export interface TechType {
   selected: boolean;
+  src: string;
+  number: number;
 }
 
 interface SelectTemplateProps {
   techs: TechType[];
+  selectTech: (selectedTech: TechType) => void;
+  changeTemplate: () => void;
 }
 
-function SelectTemplate({ techs }: SelectTemplateProps) {
+function SelectTemplate({ techs, selectTech, changeTemplate }: SelectTemplateProps) {
   return (
     <Style.Container>
       <Style.Title>TSG</Style.Title>
@@ -18,11 +22,11 @@ function SelectTemplate({ techs }: SelectTemplateProps) {
       <Style.TechStackList>
         {techs.map((tech, index) => (
           <Style.TechStackItem key={index}>
-            <TechBox selected={tech.selected} />
+            <TechBox tech={tech} clickTech={selectTech} />
           </Style.TechStackItem>
         ))}
       </Style.TechStackList>
-      <Style.SettingButton>SETTING</Style.SettingButton>
+      <Style.SettingButton onClick={changeTemplate}>SETTING</Style.SettingButton>
       <Style.Copyright>made by shellboy</Style.Copyright>
     </Style.Container>
   );

@@ -2,8 +2,10 @@ import styled from '@emotion/styled';
 
 export const Container = styled.div`
   margin: 0 auto;
+  margin-top: 70px;
   width: 510px;
   color: #ffffff;
+  user-select: none;
 `;
 
 export const Title = styled.h1`
@@ -29,6 +31,9 @@ export const TechStackList = styled.ul`
 `;
 
 export const TechStackItem = styled.li`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100px;
   height: 100px;
   margin: 0 5px 30px 5px;
