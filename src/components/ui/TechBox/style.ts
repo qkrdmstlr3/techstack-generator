@@ -10,12 +10,13 @@ export const Wrapper = styled.div<SelectedProps>`
   height: ${(props) => (props.selected ? '85px' : '100px')};
   border-radius: 4px;
   background-color: #ffffff;
-  transition: all 2s;
+  opacity: ${(props) => (props.selected ? '0.7' : '1')};
+  transition: 0.5s all;
+  cursor: pointer;
 
-  /* :active {
-    width: ${(props) => (props.selected ? '80px' : '100px')};
-    height: ${(props) => (props.selected ? '80px' : '100px')};
-  } */
+  :active {
+    transform: ${(props) => (props.selected ? 'scale(0.9)' : 'scale(1.1)')};
+  }
 `;
 
 export const Cover = styled.div<SelectedProps>`

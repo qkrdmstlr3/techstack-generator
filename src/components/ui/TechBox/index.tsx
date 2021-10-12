@@ -1,21 +1,20 @@
 import React from 'react';
+import { TechType } from '../../templates/select';
 import * as Style from './style';
 
 interface TechBoxProps {
-  selected: boolean;
-  number?: number;
+  tech: TechType;
+  clickTech: (tech: TechType) => void;
 }
 
-function TechBox({ selected, number = 0 }: TechBoxProps) {
+function TechBox({ tech, clickTech }: TechBoxProps) {
   return (
-    <Style.Wrapper aria-label="techbox" selected={selected}>
-      <Style.Cover selected={selected}>
-        {selected && (
-          <Style.NumberWrapper>
-            <Style.Number>{number}</Style.Number>
-          </Style.NumberWrapper>
-        )}
-      </Style.Cover>
+    <Style.Wrapper aria-label="techbox" selected={tech.selected} onClick={() => clickTech(tech)}>
+      {tech.selected && (
+        <Style.NumberWrapper>
+          <Style.Number>{tech.number}</Style.Number>
+        </Style.NumberWrapper>
+      )}
     </Style.Wrapper>
   );
 }
