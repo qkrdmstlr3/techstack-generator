@@ -9,6 +9,7 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   height: 100px;
+  user-select: none;
 `;
 
 export const Title = styled.h2`
