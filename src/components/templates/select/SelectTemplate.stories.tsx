@@ -1,15 +1,22 @@
 import React from 'react';
-import SelectTemplate from '.';
+import { action } from '@storybook/addon-actions';
+import SelectTemplate, { TechType } from '.';
 
 export default {
   title: 'Templates/select',
   component: SelectTemplate,
 };
 
-const techs = new Array(20).fill({ selected: false });
+const techs: TechType[] = new Array(20).fill(0).map((_, index) => ({
+  src: String(index),
+  selected: false,
+  number: 0,
+}));
 
+const clickAction = action('onclick');
+const changeAction = action('onchange');
 export const selectTemplated = () => (
   <div style={{ backgroundColor: 'black' }}>
-    <SelectTemplate techs={techs} />
+    <SelectTemplate techs={techs} selectTech={clickAction} changeTemplate={changeAction} />
   </div>
 );

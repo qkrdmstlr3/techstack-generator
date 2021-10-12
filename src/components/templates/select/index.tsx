@@ -20,8 +20,8 @@ function SelectTemplate({ techs, selectTech, changeTemplate }: SelectTemplatePro
       <Style.Title>TSG</Style.Title>
       <Style.Description>animated TechStack Generator</Style.Description>
       <Style.TechStackList>
-        {techs.map((tech, index) => (
-          <Style.TechStackItem key={index}>
+        {techs.map((tech) => (
+          <Style.TechStackItem key={tech.src}>
             <TechBox tech={tech} clickTech={selectTech} />
           </Style.TechStackItem>
         ))}

@@ -2,14 +2,22 @@
  * @jest-environment jsdom
  */
 import React from 'react';
-import { render, waitFor } from '@testing-library/react';
-import SelectTemplate from '.';
+import { render, waitFor, fireEvent } from '@testing-library/react';
+import SelectTemplate, { TechType } from '.';
+
+const selectTechMock = jest.fn();
+const changeTemplate = jest.fn();
+const techs: TechType[] = new Array(20).fill(0).map((_, index) => ({
+  src: String(index),
+  selected: false,
+  number: 0,
+}));
 
 describe('Component/Template/SelectTemplate', () => {
-  it('렌더링 테스트', async () => {
-    const techs = new Array(20).fill({ selected: false });
-    const selectComponent = render(<SelectTemplate techs={techs} />);
-
+  it('rendering test', async () => {
+    const selectComponent = render(
+      <SelectTemplate techs={techs} selectTech={selectTechMock} changeTemplate={changeTemplate} />
+    );
     await waitFor(() => {
       selectComponent.getByText('TSG');
       selectComponent.getByText('animated TechStack Generator');
@@ -17,6 +25,18 @@ describe('Component/Template/SelectTemplate', () => {
       selectComponent.getByText('made by shellboy');
       const techboxs = selectComponent.getAllByLabelText('techbox');
       expect(techboxs).toHaveLength(techs.length);
+    });
+  });
+
+  it('click setting button', async () => {
+    const selectComponent = render(
+      <SelectTemplate techs={techs} selectTech={selectTechMock} changeTemplate={changeTemplate} />
+    );
+    await waitFor(() => {
+      const settingButton = selectComponent.getByText('SETTING');
+      fireEvent.click(settingButton);
+
+      expect(changeTemplate).toHaveBeenCalledTimes(1);
     });
   });
 });
