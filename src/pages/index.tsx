@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import SelectTemplate, { TechType } from '../components/templates/select';
+import SettingTemplate from '../components/templates/setting/index';
 import GlobalStyle from '../style/GlobalStyle';
 
 enum TemplateType {
@@ -75,6 +76,8 @@ const IndexPage = () => {
     switch (currentTemplate) {
       case TemplateType.select:
         return <SelectTemplate techs={techs} selectTech={selectTech} changeTemplate={changeTemplate} />;
+      case TemplateType.setting:
+        return <SettingTemplate />;
     }
   };
 

@@ -22,33 +22,40 @@ export const Description = styled.p`
   text-align: center;
 `;
 
-export const TechStackList = styled.ul`
-  padding: 0;
+export const ButtonWrapper = styled.div`
+  margin: 0 5px;
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
-  list-style: none;
-`;
-
-export const TechStackItem = styled.li`
-  display: flex;
-  justify-content: center;
   align-items: center;
-  width: 100px;
-  height: 100px;
-  margin: 0 5px 30px 5px;
 `;
 
-export const SettingButton = styled.button`
-  width: 100%;
+export const BackButton = styled.button`
+  width: 48%;
   height: 68px;
-  margin: 0 5px;
 
   border-radius: 4px;
   font-size: 32px;
   background-color: #ffffff;
   transition: all 0.5s;
   outline: none;
+  border: none;
+
+  :active {
+    transform: scale(0.95);
+  }
+`;
+
+export const ResultButton = styled.button`
+  width: 48%;
+  height: 68px;
+
+  border-radius: 4px;
+  font-size: 32px;
+  color: #ffffff;
+  background-color: #00f703;
+  transition: all 0.5s;
+  outline: none;
+  border: none;
 
   :active {
     transform: scale(0.95);
