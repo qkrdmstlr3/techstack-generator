@@ -19,7 +19,7 @@ function SettingSize({ size, changeSize }: SettingSizeProps) {
         value={size}
         onChange={(event) => changeSize(event.target.value)}
       />
-      <Style.ExampleBox size={size} />
+      <Style.ExampleBox aria-label="example-box" size={size} />
     </Style.Container>
   );
 }
