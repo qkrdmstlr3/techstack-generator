@@ -19,24 +19,6 @@ export const Wrapper = styled.div<SelectedProps>`
   }
 `;
 
-export const Cover = styled.div<SelectedProps>`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: ${(props) => (props.selected ? '85px' : '100px')};
-  height: ${(props) => (props.selected ? '85px' : '100px')};
-
-  background-color: #253237;
-  opacity: ${(props) => (props.selected ? 0.7 : 0)};
-  transition: all 0.3s;
-  border-radius: 4px;
-  cursor: pointer;
-
-  :active {
-    transform: scale(0.9);
-  }
-`;
-
 export const NumberWrapper = styled.div`
   position: absolute;
   top: 5px;
