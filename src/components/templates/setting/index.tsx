@@ -16,9 +16,10 @@ export interface SettingType {
 interface SettingTemplateProps {
   setting: SettingType;
   changeSetting: (key: string, value: any) => void;
+  changeTemplate: (isBackButton?: boolean) => void;
 }
 
-function SettingTemplate({ setting, changeSetting }: SettingTemplateProps) {
+function SettingTemplate({ setting, changeSetting, changeTemplate }: SettingTemplateProps) {
   const changeSize = (size: string) => {
     changeSetting('size', size);
   };
@@ -46,8 +47,8 @@ function SettingTemplate({ setting, changeSetting }: SettingTemplateProps) {
         <SettingResult results={setting.results} changeResults={changeResults} />
       </Style.ContentWrapper>
       <Style.ButtonWrapper>
-        <Style.BackButton>BACK</Style.BackButton>
-        <Style.ResultButton>RESULT</Style.ResultButton>
+        <Style.BackButton onClick={() => changeTemplate(true)}>BACK</Style.BackButton>
+        <Style.ResultButton onClick={() => changeTemplate()}>RESULT</Style.ResultButton>
       </Style.ButtonWrapper>
       <Style.Copyright>made by shellboy</Style.Copyright>
     </Style.Container>

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import SelectTemplate, { TechType } from '../components/templates/select';
 import SettingTemplate from '../components/templates/setting/index';
 import GlobalStyle from '../style/GlobalStyle';
+import { ResultType } from '../components/ui/SettingResult/index';
 
 enum TemplateType {
   select = 'select',
@@ -45,7 +46,7 @@ const IndexPage = () => {
     size: '65',
     count: 5,
     interval: '50',
-    results: [],
+    results: [ResultType.html, ResultType.markdown],
   });
 
   const selectTech = (selectedTech: TechType) => {
@@ -88,7 +89,7 @@ const IndexPage = () => {
       case TemplateType.select:
         return <SelectTemplate techs={techs} selectTech={selectTech} changeTemplate={changeTemplate} />;
       case TemplateType.setting:
-        return <SettingTemplate setting={setting} changeSetting={changeSetting} />;
+        return <SettingTemplate setting={setting} changeSetting={changeSetting} changeTemplate={changeTemplate} />;
     }
   };
 
