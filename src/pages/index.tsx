@@ -41,6 +41,13 @@ const IndexPage = () => {
   const [selectedCount, setSelectedCount] = useState<number>(0);
   const [currentTemplate, setCurrentTemplate] = useState<TemplateType>(TemplateType.select);
 
+  const [setting, setSetting] = useState({
+    size: '65',
+    count: 5,
+    interval: '50',
+    results: [],
+  });
+
   const selectTech = (selectedTech: TechType) => {
     const updatedTechs = techs.map((tech) => {
       if (tech.number > selectedTech.number && selectedTech.number !== 0) {
@@ -72,12 +79,16 @@ const IndexPage = () => {
     }
   };
 
+  const changeSetting = (key: string, value: any) => {
+    setSetting({ ...setting, [key]: value });
+  };
+
   const templateComponent = () => {
     switch (currentTemplate) {
       case TemplateType.select:
         return <SelectTemplate techs={techs} selectTech={selectTech} changeTemplate={changeTemplate} />;
       case TemplateType.setting:
-        return <SettingTemplate />;
+        return <SettingTemplate setting={setting} changeSetting={changeSetting} />;
     }
   };
 

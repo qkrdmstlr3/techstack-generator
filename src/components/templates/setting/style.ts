@@ -22,6 +22,14 @@ export const Description = styled.p`
   text-align: center;
 `;
 
+export const ContentWrapper = styled.div`
+  margin: 40px 0;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+`;
+
 export const ButtonWrapper = styled.div`
   margin: 0 5px;
   display: flex;

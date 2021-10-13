@@ -25,10 +25,6 @@ function GlobalStyle(): React.ReactElement {
         li {
           list-style: none;
         }
-        input,
-        input:valid {
-          background-color: transparent;
-        }
       `}
     />
   );
