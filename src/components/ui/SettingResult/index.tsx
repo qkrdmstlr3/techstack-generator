@@ -24,14 +24,14 @@ function SettingResult({ results, changeResults }: SettingResultProps) {
   return (
     <Style.Container>
       <Style.Title>RESULT</Style.Title>
-      <Style.CheckBoxWrapper>
-        <Style.CheckBox aria-label="html-checkbox" onClick={() => clickCheckBox(ResultType.html)}>
+      <Style.CheckBoxWrapper onClick={() => clickCheckBox(ResultType.html)}>
+        <Style.CheckBox aria-label="html-checkbox">
           {results.find((result) => result === ResultType.html) && <Style.Check aria-label="html-check" />}
         </Style.CheckBox>
         <Style.CheckTitle>{ResultType.html}</Style.CheckTitle>
       </Style.CheckBoxWrapper>
-      <Style.CheckBoxWrapper>
-        <Style.CheckBox aria-label="markdown-checkbox" onClick={() => clickCheckBox(ResultType.markdown)}>
+      <Style.CheckBoxWrapper onClick={() => clickCheckBox(ResultType.markdown)}>
+        <Style.CheckBox aria-label="markdown-checkbox">
           {results.find((result) => result === ResultType.markdown) && <Style.Check aria-label="markdown-check" />}
         </Style.CheckBox>
         <Style.CheckTitle>{ResultType.markdown}</Style.CheckTitle>

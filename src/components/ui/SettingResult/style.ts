@@ -25,6 +25,7 @@ export const CheckBoxWrapper = styled.div`
   display: flex;
   align-items: center;
   margin-right: 70px;
+  cursor: pointer;
 `;
 
 export const CheckBox = styled.div`
