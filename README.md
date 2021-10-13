@@ -1,9 +1,8 @@
 # TechStack Generator
 
-svg로 프로그래밍과 관련된 icon을 만들어보는 저장소. 단순 취미 활동. svg연습
+> Generate animated html and markdown code
 
-- gif 추출 앱을 사용해서 동영상을 gif로 바꿨는데 아직 변환이 익숙치 않아 프레임이 끊겨서 보일 수 있습니다.
-- 폴더안에 있는 svg파일을 보시면 좀 더 생생한 모습을 보실 수 있습니다.
+[link](https://techstack-generator.vercel.app/)
 
 ### 언어
 
