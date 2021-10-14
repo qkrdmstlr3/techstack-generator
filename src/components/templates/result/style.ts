@@ -1,5 +1,9 @@
 import styled from '@emotion/styled';
 
+interface CategoryContentProps {
+  contentHeight?: number;
+}
+
 export const Container = styled.main`
   margin: 0 auto;
   margin-top: 70px;
@@ -22,16 +26,43 @@ export const Description = styled.p`
   text-align: center;
 `;
 
+export const CategoryWrapper = styled.div`
+  margin-top: 20px;
+`;
+
+export const CategoryTitle = styled.h2`
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 700;
+`;
+
+export const CategoryContent = styled.div<CategoryContentProps>`
+  position: relative;
+  height: ${(props) => (props.contentHeight ? props.contentHeight : 'auto')}px;
+  border-radius: 4px;
+`;
+
+export const CategoryResultContent = styled.div`
+  padding: 0 5px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  border-radius: 4px;
+  background-color: white;
+`;
+
 export const BackButton = styled.button`
   width: 100%;
   height: 68px;
-  margin: 0 5px;
 
   border-radius: 4px;
   font-size: 32px;
   background-color: #ffffff;
   transition: all 0.5s;
   outline: none;
+  border: none;
 
   :active {
     transform: scale(0.95);
