@@ -8,16 +8,20 @@ interface MakeTemplateProps {
 
 // TODO: Recursive
 export default ({ setting, selectedTechs }: MakeTemplateProps) => {
+  const colNumber = Math.ceil(selectedTechs.length / setting.count);
   let html = '<div>';
+  let i = 0;
 
-  for (let i = 1; i <= selectedTechs.length; i += 1) {
+  while (i < selectedTechs.length) {
     let row = '<div style="display: flex;">';
-    for (let j = 0; j <= setting.count; j += 1) {
-      if (i === selectedTechs.length) break;
+    for (let j = 0; j < setting.count; j += 1) {
+      if (i >= selectedTechs.length) break;
 
-      const isLastInRow = setting.count % i === setting.count - 1;
-      const rowLastImageMargin = isLastInRow ? 0 : setting.interval;
-      const imgStyle = `style="width: ${setting.size}px; height: ${setting.size}px; margin-right: ${rowLastImageMargin}px; margin-bottom: ${setting.interval}px;"`;
+      const isLastInRow = (i + 1) % setting.count === 0;
+      const isLastRow = i + 1 > (colNumber - 1) * setting.count;
+      const marginRight = isLastInRow ? 0 : setting.interval;
+      const marginBottom = isLastRow ? 0 : setting.interval;
+      const imgStyle = `style="width: ${setting.size}px; height: ${setting.size}px; margin-right: ${marginRight}px; margin-bottom: ${marginBottom}px;"`;
       row += `<img src="${selectedTechs[i].src}" alt="icon" ${imgStyle} />`;
       i = i + 1;
     }
