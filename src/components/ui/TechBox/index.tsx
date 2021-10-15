@@ -10,7 +10,9 @@ interface TechBoxProps {
 function TechBox({ tech, clickTech }: TechBoxProps) {
   return (
     <Style.Wrapper aria-label="techbox" selected={tech.selected} onClick={() => clickTech(tech)}>
-      {tech.src && <Style.Image src={tech.src} alt="icon" />}
+      <Style.ImageWrapper selected={tech.selected}>
+        {tech.src && <Style.Image src={tech.src} alt="icon" />}
+      </Style.ImageWrapper>
       {tech.selected && (
         <Style.NumberWrapper>
           <Style.Number>{tech.number}</Style.Number>

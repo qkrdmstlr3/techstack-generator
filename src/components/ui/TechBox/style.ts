@@ -5,21 +5,26 @@ interface SelectedProps {
 }
 
 export const Wrapper = styled.div<SelectedProps>`
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: relative;
   width: ${(props) => (props.selected ? '85px' : '100px')};
   height: ${(props) => (props.selected ? '85px' : '100px')};
-  border-radius: 4px;
-  background-color: #ffffff;
-  opacity: ${(props) => (props.selected ? '0.7' : '1')};
   transition: 0.5s all;
   cursor: pointer;
 
   :active {
     transform: ${(props) => (props.selected ? 'scale(0.9)' : 'scale(1.1)')};
   }
+`;
+
+export const ImageWrapper = styled.div<SelectedProps>`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 4px;
+  opacity: ${(props) => (props.selected ? '0.7' : '1')};
 `;
 
 export const Image = styled.img`
@@ -29,15 +34,18 @@ export const Image = styled.img`
 
 export const NumberWrapper = styled.div`
   position: absolute;
-  top: 5px;
-  left: 5px;
-  width: 25px;
-  height: 25px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 0.7;
 
-  border-radius: 12.5px;
+  font-size: 24px;
+  border-radius: 25px;
   background-color: #00f703;
 `;
 
