@@ -27,16 +27,28 @@ export const Description = styled.p`
 `;
 
 export const CategoryWrapper = styled.div`
-  margin-top: 20px;
+  margin: 20px 0 40px 0;
+`;
+
+export const CategoryTitleWrapper = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+export const IconWrapper = styled.div`
+  cursor: pointer;
+  display: flex;
+  align-items: flex-end;
 `;
 
 export const CategoryTitle = styled.h2`
+  margin: 13px 15px 10px 0;
   color: #ffffff;
   font-size: 24px;
   font-weight: 700;
 `;
 
-export const CategoryContent = styled.div<CategoryContentProps>`
+export const CategoryResultContentWrapper = styled.div<CategoryContentProps>`
   position: relative;
   height: ${(props) => (props.contentHeight ? props.contentHeight : 'auto')}px;
   border-radius: 4px;
@@ -51,6 +63,17 @@ export const CategoryResultContent = styled.div`
 
   border-radius: 4px;
   background-color: white;
+`;
+
+export const CategoryContent = styled.div`
+  padding: 15px 10px;
+  height: 100px;
+  overflow: hidden;
+
+  overflow-y: scroll;
+  border-radius: 4px;
+  color: #000000;
+  background-color: #ffffff;
 `;
 
 export const BackButton = styled.button`

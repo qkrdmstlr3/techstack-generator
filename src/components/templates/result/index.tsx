@@ -1,9 +1,11 @@
 import React from 'react';
 import { SettingType } from '../setting/index';
 import { TechType } from '../select/index';
+import { ResultType } from '../../ui/SettingResult';
 import * as Style from './style';
 
 import makeHTML from '../../../utils/makeHTML';
+import Copy from '../../ui/Icon/Copy';
 
 interface ResultTemplateProps {
   setting: SettingType;
@@ -16,16 +18,31 @@ function ResultTemplate({ setting, techs }: ResultTemplateProps) {
   const resultColNumber = Math.ceil(techs.length / setting.count);
   const resultHeight = resultColNumber * Number(setting.size) + (resultColNumber - 1) * Number(setting.interval);
 
+  const copyToClipboard = (value: string) => {
+    navigator.clipboard.writeText(value);
+  };
+
   return (
     <Style.Container>
       <Style.Title>TSG</Style.Title>
       <Style.Description>animated TechStack Generator</Style.Description>
       <Style.CategoryWrapper>
         <Style.CategoryTitle>RESULT</Style.CategoryTitle>
-        <Style.CategoryContent contentHeight={resultHeight}>
+        <Style.CategoryResultContentWrapper contentHeight={resultHeight}>
           <Style.CategoryResultContent dangerouslySetInnerHTML={{ __html: resultHTML }} />
-        </Style.CategoryContent>
+        </Style.CategoryResultContentWrapper>
       </Style.CategoryWrapper>
+      {setting.results.includes(ResultType.html) && (
+        <Style.CategoryWrapper>
+          <Style.CategoryTitleWrapper>
+            <Style.CategoryTitle>HTML</Style.CategoryTitle>
+            <Style.IconWrapper onClick={() => copyToClipboard(resultHTML)}>
+              <Copy />
+            </Style.IconWrapper>
+          </Style.CategoryTitleWrapper>
+          <Style.CategoryContent>{resultHTML}</Style.CategoryContent>
+        </Style.CategoryWrapper>
+      )}
       <Style.BackButton>BACK</Style.BackButton>
       <Style.Copyright>made by shellboy</Style.Copyright>
     </Style.Container>
