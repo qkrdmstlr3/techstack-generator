@@ -22,7 +22,7 @@ describe('Component/Template/SelectTemplate', () => {
       selectComponent.getByText('TSG');
       selectComponent.getByText('animated TechStack Generator');
       selectComponent.getByText('SETTING');
-      selectComponent.getByText('made by shellboy');
+      selectComponent.getByText('shellboy');
       const techboxs = selectComponent.getAllByLabelText('techbox');
       expect(techboxs).toHaveLength(techs.length);
     });
