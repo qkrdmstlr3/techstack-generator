@@ -50,7 +50,12 @@ function SettingTemplate({ setting, changeSetting, changeTemplate }: SettingTemp
         <Style.BackButton onClick={() => changeTemplate(true)}>BACK</Style.BackButton>
         <Style.ResultButton onClick={() => changeTemplate()}>RESULT</Style.ResultButton>
       </Style.ButtonWrapper>
-      <Style.Copyright>made by shellboy</Style.Copyright>
+      <Style.Copyright>
+        made by{' '}
+        <Style.ATag href="https://github.com/qkrdmstlr3" target="_blank">
+          shellboy
+        </Style.ATag>
+      </Style.Copyright>
     </Style.Container>
   );
 }

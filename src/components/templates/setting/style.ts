@@ -77,3 +77,7 @@ export const Copyright = styled.p`
   word-spacing: 10px;
   letter-spacing: 3px;
 `;
+
+export const ATag = styled.a`
+  border-bottom: 2px solid #00f703;
+`;

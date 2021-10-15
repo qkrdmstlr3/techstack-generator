@@ -27,7 +27,12 @@ function SelectTemplate({ techs, selectTech, changeTemplate }: SelectTemplatePro
         ))}
       </Style.TechStackList>
       <Style.SettingButton onClick={changeTemplate}>SETTING</Style.SettingButton>
-      <Style.Copyright>made by shellboy</Style.Copyright>
+      <Style.Copyright>
+        made by{' '}
+        <Style.ATag href="https://github.com/qkrdmstlr3" target="_blank">
+          shellboy
+        </Style.ATag>
+      </Style.Copyright>
     </Style.Container>
   );
 }
