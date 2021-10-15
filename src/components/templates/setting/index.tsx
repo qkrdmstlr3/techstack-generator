@@ -15,17 +15,18 @@ export interface SettingType {
 
 interface SettingTemplateProps {
   setting: SettingType;
+  selectedCount: number;
   changeSetting: (key: string, value: any) => void;
   changeTemplate: (isBackButton?: boolean) => void;
 }
 
-function SettingTemplate({ setting, changeSetting, changeTemplate }: SettingTemplateProps) {
+function SettingTemplate({ setting, selectedCount, changeSetting, changeTemplate }: SettingTemplateProps) {
   const changeSize = (size: string) => {
     changeSetting('size', size);
   };
 
   const changeCount = (count: number) => {
-    changeSetting('count', count < 1 ? 1 : count);
+    changeSetting('count', count < 1 ? 1 : Math.min(count, selectedCount));
   };
 
   const changeInterval = (interval: string) => {
