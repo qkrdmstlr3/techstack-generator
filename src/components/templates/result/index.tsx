@@ -10,12 +10,13 @@ import Copy from '../../ui/Icon/Copy';
 interface ResultTemplateProps {
   setting: SettingType;
   techs: TechType[];
+  changeTemplate: () => void;
 }
 
-function ResultTemplate({ setting, techs }: ResultTemplateProps) {
+function ResultTemplate({ setting, techs, changeTemplate }: ResultTemplateProps) {
   const selectedTechs = techs.filter((tech) => tech.selected).sort((a, b) => a.number - b.number);
   const resultHTML = makeHTML({ setting, selectedTechs });
-  const resultColNumber = Math.ceil(techs.length / setting.count);
+  const resultColNumber = Math.ceil(selectedTechs.length / setting.count);
   const resultHeight = resultColNumber * Number(setting.size) + (resultColNumber - 1) * Number(setting.interval);
 
   const copyToClipboard = (value: string) => {
@@ -43,7 +44,7 @@ function ResultTemplate({ setting, techs }: ResultTemplateProps) {
           <Style.CategoryContent>{resultHTML}</Style.CategoryContent>
         </Style.CategoryWrapper>
       )}
-      <Style.BackButton>BACK</Style.BackButton>
+      <Style.BackButton onClick={changeTemplate}>BACK</Style.BackButton>
       <Style.Copyright>made by shellboy</Style.Copyright>
     </Style.Container>
   );

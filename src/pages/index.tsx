@@ -3,6 +3,7 @@ import SelectTemplate, { TechType } from '../components/templates/select';
 import SettingTemplate from '../components/templates/setting/index';
 import GlobalStyle from '../style/GlobalStyle';
 import { ResultType } from '../components/ui/SettingResult/index';
+import ResultTemplate from '../components/templates/result/index';
 
 enum TemplateType {
   select = 'select',
@@ -90,6 +91,8 @@ const IndexPage = () => {
         return <SelectTemplate techs={techs} selectTech={selectTech} changeTemplate={changeTemplate} />;
       case TemplateType.setting:
         return <SettingTemplate setting={setting} changeSetting={changeSetting} changeTemplate={changeTemplate} />;
+      case TemplateType.result:
+        return <ResultTemplate setting={setting} techs={techs} changeTemplate={changeTemplate} />;
     }
   };
 

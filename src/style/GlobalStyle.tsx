@@ -10,7 +10,6 @@ function GlobalStyle(): React.ReactElement {
         }
         html,
         body {
-          height: 100%;
           font-size: 62.5%;
           background-color: #253237;
         }
