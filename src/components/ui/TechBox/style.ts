@@ -5,6 +5,9 @@ interface SelectedProps {
 }
 
 export const Wrapper = styled.div<SelectedProps>`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   width: ${(props) => (props.selected ? '85px' : '100px')};
   height: ${(props) => (props.selected ? '85px' : '100px')};
@@ -17,6 +20,11 @@ export const Wrapper = styled.div<SelectedProps>`
   :active {
     transform: ${(props) => (props.selected ? 'scale(0.9)' : 'scale(1.1)')};
   }
+`;
+
+export const Image = styled.img`
+  width: 95%;
+  height: 95%;
 `;
 
 export const NumberWrapper = styled.div`
