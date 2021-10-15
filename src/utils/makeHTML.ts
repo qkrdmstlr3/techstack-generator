@@ -22,7 +22,7 @@ export default ({ setting, selectedTechs }: MakeTemplateProps) => {
       const marginRight = isLastInRow ? 0 : setting.interval;
       const marginBottom = isLastRow ? 0 : setting.interval;
       const imgStyle = `style="width: ${setting.size}px; height: ${setting.size}px; margin-right: ${marginRight}px; margin-bottom: ${marginBottom}px;"`;
-      row += `<img src="${selectedTechs[i].src}" alt="icon" ${imgStyle} />`;
+      row += `<img src="https://techstack-generator.vercel.app/${selectedTechs[i].src}" alt="icon" ${imgStyle} />`;
       i = i + 1;
     }
     row += `</div>`;
