@@ -43,7 +43,7 @@ export const IconWrapper = styled.div`
 
 export const CategoryTitle = styled.h2`
   margin: 13px 15px 10px 0;
-  color: #ffffff;
+  color: #00f703;
   font-size: 24px;
   font-weight: 700;
 `;
@@ -70,9 +70,23 @@ export const CategoryContent = styled.div`
   height: 100px;
   overflow: hidden;
 
+  font-size: 13px;
   overflow-y: scroll;
   border-radius: 4px;
   color: #000000;
+  background-color: #ffffff;
+
+  > div {
+    width: fit-content;
+  }
+`;
+
+export const MarkdownWrapper = styled.div`
+  margin: 0 auto;
+  width: fit-content;
+  padding: 0 5px;
+
+  border-radius: 4px;
   background-color: #ffffff;
 `;
 
