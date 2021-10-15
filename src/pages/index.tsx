@@ -12,17 +12,17 @@ enum TemplateType {
 }
 
 const techsSrc: string[] = [
-  'https://raw.githubusercontent.com/qkrdmstlr3/techstack-generator/master/techs/js-icon/js-icon.gif',
-  'https://raw.githubusercontent.com/qkrdmstlr3/techstack-generator/master/techs/ts-icon/ts-icon.gif',
-  'https://raw.githubusercontent.com/qkrdmstlr3/techstack-generator/master/techs/cpp-icon/cpp-icon.gif',
-  'https://raw.githubusercontent.com/qkrdmstlr3/techstack-generator/master/techs/graphql-icon/graphql-icon.gif',
-  'https://raw.githubusercontent.com/qkrdmstlr3/techstack-generator/master/techs/swift-icon/swift-icon.gif',
-  'https://raw.githubusercontent.com/qkrdmstlr3/techstack-generator/master/techs/react-icon/react-icon.gif',
-  'https://raw.githubusercontent.com/qkrdmstlr3/techstack-generator/master/techs/github-icon/github-icon.gif',
-  'https://raw.githubusercontent.com/qkrdmstlr3/techstack-generator/master/techs/docker-icon/docker-icon.gif',
-  'https://raw.githubusercontent.com/qkrdmstlr3/techstack-generator/master/techs/localhost-icon/localhost-icon.gif',
-  'https://raw.githubusercontent.com/qkrdmstlr3/techstack-generator/master/techs/raspberrypi-icon/raspberrypi-icon.gif',
-  'https://raw.githubusercontent.com/qkrdmstlr3/techstack-generator/master/techs/map-icon/map-icon.gif',
+  '/js-icon.gif',
+  '/ts-icon.gif',
+  '/cpp-icon.gif',
+  '/graphql-icon.gif',
+  '/swift-icon.gif',
+  '/react-icon.gif',
+  '/github-icon.gif',
+  '/docker-icon.gif',
+  '/localhost-icon.gif',
+  '/raspberrypi-icon.gif',
+  '/map-icon.gif',
   '',
 ];
 
