@@ -19,7 +19,7 @@ const techsSrc: string[] = [
   '/swift-icon.gif',
   '/react-icon.gif',
   '/github-icon.gif',
-  '/docker-icon.gif',
+  '/docker-icon.svg',
   '/localhost-icon.gif',
   '/raspberrypi-icon.gif',
   '/map-icon.gif',
@@ -37,7 +37,7 @@ const IndexPage = () => {
 
   const [setting, setSetting] = useState({
     size: '65',
-    count: 5,
+    count: 1,
     interval: '50',
     results: [ResultType.html, ResultType.markdown],
   });
@@ -82,7 +82,14 @@ const IndexPage = () => {
       case TemplateType.select:
         return <SelectTemplate techs={techs} selectTech={selectTech} changeTemplate={changeTemplate} />;
       case TemplateType.setting:
-        return <SettingTemplate setting={setting} changeSetting={changeSetting} changeTemplate={changeTemplate} />;
+        return (
+          <SettingTemplate
+            setting={setting}
+            selectedCount={selectedCount}
+            changeSetting={changeSetting}
+            changeTemplate={changeTemplate}
+          />
+        );
       case TemplateType.result:
         return <ResultTemplate setting={setting} techs={techs} changeTemplate={changeTemplate} />;
     }
