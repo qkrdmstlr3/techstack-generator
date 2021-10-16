@@ -7,6 +7,7 @@ interface CategoryContentProps {
 export const Container = styled.main`
   margin: 0 auto;
   margin-top: 70px;
+  padding-bottom: 150px;
   width: 510px;
   color: #ffffff;
   user-select: none;
@@ -62,7 +63,18 @@ export const CategoryResultContent = styled.div`
   transform: translateX(-50%);
 
   border-radius: 4px;
-  background-color: white;
+  background-color: #ffffff;
+`;
+
+export const MarkdownWrapper = styled.div`
+  width: fit-content;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  border-radius: 4px;
+  background-color: #ffffff;
 `;
 
 export const CategoryContent = styled.div`
@@ -79,15 +91,6 @@ export const CategoryContent = styled.div`
   > div {
     width: fit-content;
   }
-`;
-
-export const MarkdownWrapper = styled.div`
-  margin: 0 auto;
-  width: fit-content;
-  padding: 0 5px;
-
-  border-radius: 4px;
-  background-color: #ffffff;
 `;
 
 export const BackButton = styled.button`

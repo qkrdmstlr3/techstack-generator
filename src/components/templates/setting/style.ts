@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 export const Container = styled.main`
   margin: 0 auto;
   margin-top: 70px;
+  padding-bottom: 150px;
   width: 510px;
   color: #ffffff;
   user-select: none;

@@ -21,7 +21,8 @@ function ResultTemplate({ setting, techs, changeTemplate }: ResultTemplateProps)
   const resultMarkdown = makeMarkdown({ setting, selectedTechs });
   const resultHTML = makeHTML({ setting, selectedTechs });
   const resultColNumber = Math.ceil(selectedTechs.length / setting.count);
-  const resultHeight = resultColNumber * Number(setting.size) + (resultColNumber - 1) * Number(setting.interval);
+  const resultHTMLHeight = resultColNumber * Number(setting.size) + (resultColNumber - 1) * Number(setting.interval);
+  const resultMarkdownHeight = resultColNumber * Number(setting.size);
 
   const copyToClipboard = (value: string) => {
     navigator.clipboard.writeText(value);
@@ -40,7 +41,7 @@ function ResultTemplate({ setting, techs, changeTemplate }: ResultTemplateProps)
                 <Copy />
               </Style.IconWrapper>
             </Style.CategoryTitleWrapper>
-            <Style.CategoryResultContentWrapper contentHeight={resultHeight}>
+            <Style.CategoryResultContentWrapper contentHeight={resultHTMLHeight}>
               <Style.CategoryResultContent dangerouslySetInnerHTML={{ __html: resultHTML }} />
             </Style.CategoryResultContentWrapper>
           </Style.CategoryWrapper>
@@ -58,9 +59,11 @@ function ResultTemplate({ setting, techs, changeTemplate }: ResultTemplateProps)
                 <Copy />
               </Style.IconWrapper>
             </Style.CategoryTitleWrapper>
-            <Style.MarkdownWrapper>
-              <ReactMarkdown rehypePlugins={[rehypeRaw]}>{resultMarkdown}</ReactMarkdown>
-            </Style.MarkdownWrapper>
+            <Style.CategoryResultContentWrapper contentHeight={resultMarkdownHeight}>
+              <Style.MarkdownWrapper>
+                <ReactMarkdown rehypePlugins={[rehypeRaw]}>{resultMarkdown}</ReactMarkdown>
+              </Style.MarkdownWrapper>
+            </Style.CategoryResultContentWrapper>
           </Style.CategoryWrapper>
           <Style.CategoryWrapper>
             <Style.CategoryContent>{resultMarkdown}</Style.CategoryContent>
