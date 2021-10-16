@@ -1,5 +1,5 @@
 import { TechType } from '../components/templates/select';
-import makeHTML from './makeHTML';
+import makeMarkdown from './makeMarkdown';
 import { SettingType } from '../components/templates/setting/index';
 import { ResultType } from '../components/ui/SettingResult';
 
@@ -15,9 +15,9 @@ const setting: SettingType = {
   results: [ResultType.html],
 };
 
-describe('Utils/makeHTML', () => {
+describe('Utils/makeMarkdown', () => {
   it('test result', () => {
-    const result = makeHTML({ setting, selectedTechs });
+    const result = makeMarkdown({ setting, selectedTechs });
 
     expect(result).not.toBeNull();
   });
