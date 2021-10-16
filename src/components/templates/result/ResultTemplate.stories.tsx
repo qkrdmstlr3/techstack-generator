@@ -1,4 +1,5 @@
 import React from 'react';
+import { action } from '@storybook/addon-actions';
 import ResultTemplate from '.';
 import { SettingType } from '../setting/index';
 import { ResultType } from '../../ui/SettingResult/index';
@@ -22,8 +23,9 @@ const setting: SettingType = {
   results: [ResultType.html],
 };
 
+const changeAction = action('onchange');
 export const resultTemplate = () => (
   <div style={{ backgroundColor: 'black' }}>
-    <ResultTemplate setting={setting} techs={techs} />
+    <ResultTemplate setting={setting} techs={techs} changeTemplate={changeAction} />
   </div>
 );
