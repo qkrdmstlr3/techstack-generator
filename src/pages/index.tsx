@@ -12,17 +12,17 @@ enum TemplateType {
 }
 
 const techsSrc: string[] = [
-  '/js-icon.gif',
-  '/ts-icon.gif',
+  '/js-icon.svg',
+  '/ts-icon.svg',
   '/cpp-icon.svg',
-  '/graphql-icon.gif',
-  '/swift-icon.gif',
-  '/react-icon.gif',
-  '/github-icon.gif',
+  '/graphql-icon.svg',
+  '/swift-icon.svg',
+  '/react-icon.svg',
+  '/github-icon.svg',
   '/docker-icon.svg',
-  '/localhost-icon.gif',
-  '/raspberrypi-icon.gif',
-  '/map-icon.gif',
+  '/localhost-icon.svg',
+  '/raspberrypi-icon.svg',
+  '/map-icon.svg',
   '',
 ];
 
