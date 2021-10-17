@@ -14,7 +14,7 @@ enum TemplateType {
 const techsSrc: string[] = [
   '/js-icon.gif',
   '/ts-icon.gif',
-  '/cpp-icon.gif',
+  '/cpp-icon.svg',
   '/graphql-icon.gif',
   '/swift-icon.gif',
   '/react-icon.gif',
