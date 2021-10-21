@@ -17,5 +17,14 @@ module.exports = {
         allExtensions: true,
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: 'Techstack-Generator',
+        short_name: 'Techstack-Generator',
+        start_url: '/',
+        icon: 'src/asset/favicon.png',
+      },
+    },
   ],
 };
