@@ -4,6 +4,7 @@ import SettingTemplate from '../components/templates/setting/index';
 import GlobalStyle from '../style/GlobalStyle';
 import { ResultType } from '../components/ui/SettingResult/index';
 import ResultTemplate from '../components/templates/result/index';
+import SEO from '../utils/SEO';
 
 enum TemplateType {
   select = 'select',
@@ -97,6 +98,7 @@ const IndexPage = () => {
 
   return (
     <>
+      <SEO />
       <GlobalStyle />
       {templateComponent()}
     </>
