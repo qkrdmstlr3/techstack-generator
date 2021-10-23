@@ -45,6 +45,7 @@ export const SettingButton = styled.button`
   height: 68px;
   margin: 0 5px;
 
+  border: none;
   border-radius: 4px;
   font-size: 32px;
   background-color: #ffffff;
