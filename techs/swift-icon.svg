@@ -62,7 +62,7 @@
 		</style>
 	</defs>
 	<g class="text-box">
-		<text class="text" x="12" y="35">swift</text>
+		<text class="text" x="12" y="35" fill="#F6291E">swift</text>
 	</g>
 	<g class="swift">
 		<!-- <line class="line" x1="38.8" y1="22.5" x2="23" y2="9" stroke="black"></line>
