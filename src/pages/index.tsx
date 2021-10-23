@@ -15,6 +15,7 @@ enum TemplateType {
 const techsSrc: string[] = [
   'js-icon.svg',
   'ts-icon.svg',
+  'rescript-icon.svg',
   'cpp-icon.svg',
   'graphql-icon.svg',
   'swift-icon.svg',
@@ -24,7 +25,6 @@ const techsSrc: string[] = [
   'localhost-icon.svg',
   'raspberrypi-icon.svg',
   'map-icon.svg',
-  '',
 ];
 
 const initTechs = (): TechType[] => {
