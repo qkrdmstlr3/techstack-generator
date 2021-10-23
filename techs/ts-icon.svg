@@ -34,7 +34,7 @@
 
           @keyframes fill-ani {
             50% {
-              y: 25px;
+              y: 18px;
             }
             100% {
               y: 80px;
@@ -74,7 +74,7 @@
         <pattern id="wave" width="0.1" height="1">
           <path
             fill=" #0276C6"
-            d="M 0 10 C 3 12, 4 15, 15 10 C 17 9, 18 5, 30 10 L 30 60 L 0 60 z"
+            d="M 0 10 C 3 12, 5 15, 14 10 C 17 9, 20 5, 30 10 L 30 60 L 0 60 z"
           />
         </pattern>
         <mask id="wave-mask">
