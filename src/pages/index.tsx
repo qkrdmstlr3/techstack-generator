@@ -17,6 +17,7 @@ const techsSrc: string[] = [
   'ts-icon.svg',
   'rescript-icon.svg',
   'cpp-icon.svg',
+  'csharp-icon.svg',
   'graphql-icon.svg',
   'swift-icon.svg',
   'react-icon.svg',
@@ -25,6 +26,9 @@ const techsSrc: string[] = [
   'localhost-icon.svg',
   'raspberrypi-icon.svg',
   'map-icon.svg',
+  '',
+  '',
+  '',
 ];
 
 const initTechs = (): TechType[] => {
