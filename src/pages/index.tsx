@@ -48,6 +48,9 @@ const IndexPage = () => {
   });
 
   const selectTech = (selectedTech: TechType) => {
+    if (!selectedTech.src) {
+      return;
+    }
     const updatedTechs = techs.map((tech) => {
       if (tech.number > selectedTech.number && selectedTech.number !== 0) {
         tech.number -= 1;
