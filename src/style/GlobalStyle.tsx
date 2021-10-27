@@ -7,6 +7,7 @@ function GlobalStyle(): React.ReactElement {
       styles={css`
         * {
           box-sizing: border-box;
+          font-family: swap;
         }
         html,
         body {
