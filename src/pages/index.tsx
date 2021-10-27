@@ -23,12 +23,8 @@ const techsSrc: string[] = [
   'react-icon.svg',
   'github-icon.svg',
   'docker-icon.svg',
-  'localhost-icon.svg',
   'raspberrypi-icon.svg',
   'map-icon.svg',
-  '',
-  '',
-  '',
 ];
 
 const initTechs = (): TechType[] => {
