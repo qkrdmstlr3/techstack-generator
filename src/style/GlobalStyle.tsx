@@ -7,7 +7,7 @@ function GlobalStyle(): React.ReactElement {
       styles={css`
         * {
           box-sizing: border-box;
-          font-family: sans;
+          font-family: limelight;
         }
         html,
         body {
