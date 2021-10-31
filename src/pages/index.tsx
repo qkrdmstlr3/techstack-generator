@@ -21,10 +21,14 @@ const techsSrc: string[] = [
   'graphql-icon.svg',
   'swift-icon.svg',
   'react-icon.svg',
+  'gatsby-icon.svg',
   'github-icon.svg',
   'docker-icon.svg',
   'raspberrypi-icon.svg',
   'map-icon.svg',
+  '',
+  '',
+  '',
 ];
 
 const initTechs = (): TechType[] => {
