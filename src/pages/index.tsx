@@ -24,9 +24,9 @@ const techsSrc: string[] = [
   'gatsby-icon.svg',
   'github-icon.svg',
   'docker-icon.svg',
+  'kubernetes-icon.svg',
   'raspberrypi-icon.svg',
   'map-icon.svg',
-  '',
   '',
   '',
 ];
