@@ -3,7 +3,7 @@
   <defs>
     <style>
       @keyframes second-floor-ani {
-        0% {
+        0%, 10% {
           transform: translateX(-55px)
         }
         35%, 55% {
@@ -14,13 +14,13 @@
         }
       }
       @keyframes third-floor-ani {
-        0% {
+        0%, 10% {
           transform: translateX(-167px)
         }
-        45.5%, 50% {
+        45.5%, 55% {
           transform: translateX(55px)
         }
-        96%, 100% {
+        90%, 100% {
           transform: translateX(-167px)
         }
       }
