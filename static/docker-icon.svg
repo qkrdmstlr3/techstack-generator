@@ -2,86 +2,70 @@
   <!-- https://www.iconfinder.com/icons/4373190/docker_logo_logos_icon -->
   <defs>
     <style>
-      @keyframes docker-ani {
-        50% { transform: translateY(-35px); }
+      @keyframes second-floor-ani {
+        0% {
+          transform: translateX(-55px)
+        }
+        35%, 55% {
+          transform: translateX(55px)
+        }
+        80%, 100% {
+          transform: translateX(-55px)
+        }
       }
-      @keyframes top-layer-ani {
-        25% { transform: translateY(-50px) rotate(360deg); }
-        65% { transform: translateY(-50px) rotate(720deg); }
-        80% { transform: translateY(-50px) rotate(720deg); }
-        100% { transform: rotate(1080deg); }
+      @keyframes third-floor-ani {
+        0% {
+          transform: translateX(-167px)
+        }
+        45.5%, 50% {
+          transform: translateX(55px)
+        }
+        96%, 100% {
+          transform: translateX(-167px)
+        }
       }
-      @keyframes middle-layer-ani {
-        22% { transform: translateY(-100px) rotate(360deg); }
-        65% { transform: translateY(-100px) rotate(720deg); }
-        90%, 100% { transform: rotate(1080deg); }
+      @keyframes whale-ani {
+        0% {
+          transform: rotate(-20deg)
+        } 25%, 40% {
+          transform: rotate(20deg)
+        } 75%, 100% {
+          transform: rotate(-20deg)
+        }
       }
-      @keyframes bottom-layer-ani {
-        20% { transform: translateY(-150px) rotate(360deg); }
-        50% { transform: translateY(-150px) rotate(720deg); }
-        90%, 100% { transform: rotate(1080deg); }
+      #docker-icon {
+        animation: whale-ani 5s ease-in infinite;
+        transform-origin: 50% 50%;
       }
       .docker {
         fill: #099CEC
       }
-      .box-1 {
-        transform-origin: 253px 116px;
-        animation: top-layer-ani 3s linear infinite;
+      .second-floor {
+        animation: second-floor-ani 5s ease-in infinite;
       }
-      .box-2 {
-        transform-origin: 140px 171px;
-        animation: middle-layer-ani 3s linear infinite;
+      .third-floor {
+        animation: third-floor-ani 5s ease-in infinite;
       }
-      .box-3 {
-        transform-origin: 195px 171px;
-        animation: middle-layer-ani 3s linear infinite;
-      }
-      .box-4 {
-        transform-origin: 253px 171px;
-        animation: middle-layer-ani 3s linear infinite;
-      }
-      .box-5 {
-        transform-origin: 83px 223px;
-        animation: bottom-layer-ani 3s linear infinite;
-      }
-      .box-6 {
-        transform-origin: 139px 223px;
-        animation: bottom-layer-ani 3s linear infinite;
-      }
-      .box-7 {
-        transform-origin: 195px 223px;
-        animation: bottom-layer-ani 3s linear infinite;
-      }
-      .box-8 {
-        transform-origin: 250.5px 223px;
-        animation: bottom-layer-ani 3s linear infinite;
-      }
-      .box-9 {
-        transform-origin: 308px 223px;
-        animation: bottom-layer-ani 3s linear infinite;
-      }
-      #docker-icon {
-        animation: docker-ani 3s linear infinite;
-      }
-      .eye {
-        fill: white;
-      }
-      .eyeball {
-        fill: black;
-      }
+      
     </style>
   </defs>
   <g id="docker-icon">
     <g>
-      <rect class="docker box-1" height="43.625" width="47.506" x="229.999" y="94.975"/>
-      <rect class="docker box-2" height="43.193" width="47.505" x="117.738" y="147.225"/>
-      <rect class="docker box-3" height="43.193" width="47.506" x="173.869" y="147.225"/>
-      <rect class="docker box-4" height="43.193" width="47.506" x="229.999" y="147.225"/>
-      <rect class="docker box-5" height="42.691" width="47.506" x="61.68" y="199.043"></rect>
-      <rect class="docker box-6" height="42.691" width="47.505" x="117.738" y="199.043"/>
-      <rect class="docker box-7" height="42.691" width="47.506" x="173.869" y="199.043"/>
-      <rect class="docker box-8" height="42.69" width="47.506" x="229.999" y="199.115"/>
-      <rect class="docker box-9" height="42.691" width="47.507" x="286.2" y="199.043"/>
+    <g class="third-floor">
+      <rect class="docker" height="43.625" width="47.506" x="229.999" y="94.975"/>
+    </g>
+    <g class="second-floor">
+      <rect class="docker" height="43.193" width="47.505" x="117.738" y="147.225"/>
+      <rect class="docker" height="43.193" width="47.506" x="173.869" y="147.225"/>
+      <rect class="docker" height="43.193" width="47.506" x="229.999" y="147.225"/>
+    </g>
+    <g>
+      <rect class="docker" height="42.691" width="47.506" x="61.68" y="199.043"></rect>
+      <rect class="docker" height="42.691" width="47.505" x="117.738" y="199.043"/>
+      <rect class="docker" height="42.691" width="47.506" x="173.869" y="199.043"/>
+      <rect class="docker" height="42.69" width="47.506" x="229.999" y="199.115"/>
+      <rect class="docker" height="42.691" width="47.507" x="286.2" y="199.043"/>
+    </g>
     </g>
     <path class="docker" 
       d="M476.441,219.095c-10.35-6.972-34.21-9.487-52.537-6.036 c-2.371-17.249-12.003-32.27-29.538-45.782l-10.062-6.685l-6.685,10.062c-13.225,19.98-16.817,52.896-2.658,74.602     c-6.252,3.377-18.545,7.978-34.786,7.689H27.757c-6.252,36.511,4.169,83.945,31.624,116.501     c26.663,31.551,66.623,47.579,118.872,47.579c113.124,0,196.851-52.104,236.021-146.76c15.381,0.288,48.584,0.073,65.618-32.483     c1.078-1.797,4.743-9.488,6.107-12.291L476.441,219.095z"/>
