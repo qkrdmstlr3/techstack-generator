@@ -8,7 +8,7 @@ import * as Style from './style';
 
 import makeHTML from '../../../utils/makeHTML';
 import makeMarkdown from '../../../utils/makeMarkdown';
-import Copy from '../../ui/Icon/Copy';
+import CopyButton from '../../ui/CopyButton';
 
 interface ResultTemplateProps {
   setting: SettingType;
@@ -24,10 +24,6 @@ function ResultTemplate({ setting, techs, changeTemplate }: ResultTemplateProps)
   const resultHTMLHeight = resultColNumber * Number(setting.size) + (resultColNumber - 1) * Number(setting.interval);
   const resultMarkdownHeight = resultColNumber * Number(setting.size);
 
-  const copyToClipboard = (value: string) => {
-    navigator.clipboard.writeText(value);
-  };
-
   return (
     <Style.Container>
       <Style.Title>TSG</Style.Title>
@@ -37,9 +33,7 @@ function ResultTemplate({ setting, techs, changeTemplate }: ResultTemplateProps)
           <Style.CategoryWrapper>
             <Style.CategoryTitleWrapper>
               <Style.CategoryTitle>HTML RESULT</Style.CategoryTitle>
-              <Style.IconWrapper onClick={() => copyToClipboard(resultHTML)}>
-                <Copy />
-              </Style.IconWrapper>
+              <CopyButton text={resultHTML} />
             </Style.CategoryTitleWrapper>
             <Style.CategoryResultContentWrapper contentHeight={resultHTMLHeight}>
               <Style.CategoryResultContent dangerouslySetInnerHTML={{ __html: resultHTML }} />
@@ -55,9 +49,7 @@ function ResultTemplate({ setting, techs, changeTemplate }: ResultTemplateProps)
           <Style.CategoryWrapper>
             <Style.CategoryTitleWrapper>
               <Style.CategoryTitle>MARKDOWN RESULT</Style.CategoryTitle>
-              <Style.IconWrapper onClick={() => copyToClipboard(resultMarkdown)}>
-                <Copy />
-              </Style.IconWrapper>
+              <CopyButton text={resultMarkdown} />
             </Style.CategoryTitleWrapper>
             <Style.CategoryResultContentWrapper contentHeight={resultMarkdownHeight}>
               <Style.MarkdownWrapper>

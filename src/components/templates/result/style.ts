@@ -36,12 +36,6 @@ export const CategoryTitleWrapper = styled.div`
   align-items: center;
 `;
 
-export const IconWrapper = styled.div`
-  cursor: pointer;
-  display: flex;
-  align-items: flex-end;
-`;
-
 export const CategoryTitle = styled.h2`
   margin: 13px 15px 10px 0;
   color: #00f703;
