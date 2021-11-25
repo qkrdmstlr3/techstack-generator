@@ -1,5 +1,7 @@
 import React from 'react';
 import * as Style from './style';
+import Question from '../Icon/Question';
+import { Header, ToolTip } from './style';
 
 interface SettingIntervalProps {
   interval: string;
@@ -10,6 +12,10 @@ function SettingInterval({ interval, changeInterval }: SettingIntervalProps) {
   return (
     <Style.Container>
       <Style.Title>ICON INTERVAL</Style.Title>
+      <Style.IconWrapper>
+        <Question />
+        <Style.ToolTip>It doesn't apply to MARKDOWN</Style.ToolTip>
+      </Style.IconWrapper>
       <Style.Range
         aria-label="interval-range"
         type="range"

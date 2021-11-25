@@ -12,6 +12,31 @@ export const Container = styled.div`
   user-select: none;
 `;
 
+export const IconWrapper = styled.header`
+  position: absolute;
+  top: 5px;
+  left: 185px;
+
+  &:hover div {
+    visibility: visible;
+  }
+`;
+
+export const ToolTip = styled.div`
+  position: absolute;
+  bottom: 5px;
+  left: 20px;
+  width: fit-content;
+  visibility: hidden;
+  padding: 5px;
+  width: 160px;
+  background-color: black;
+  color: #00f703;
+  text-align: center;
+  border-radius: 6px;
+  font-size: 18px;
+`;
+
 export const Title = styled.h2`
   position: absolute;
   margin: 0;
