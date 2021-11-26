@@ -1,7 +1,6 @@
 import React from 'react';
 import * as Style from './style';
 import Question from '../Icon/Question';
-import { Header, ToolTip } from './style';
 
 interface SettingIntervalProps {
   interval: string;

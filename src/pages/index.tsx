@@ -22,12 +22,12 @@ const techsSrc: string[] = [
   'swift-icon.svg',
   'react-icon.svg',
   'gatsby-icon.svg',
+  'webpack-icon.svg',
   'github-icon.svg',
   'docker-icon.svg',
   'kubernetes-icon.svg',
   'raspberrypi-icon.svg',
   'map-icon.svg',
-  '',
   '',
 ];
 
