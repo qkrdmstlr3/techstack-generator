@@ -21,6 +21,7 @@ const techsSrc: string[] = [
   'graphql-icon.svg',
   'swift-icon.svg',
   'react-icon.svg',
+  'redux-icon.svg',
   'gatsby-icon.svg',
   'webpack-icon.svg',
   'eslint-icon.svg',
@@ -29,6 +30,9 @@ const techsSrc: string[] = [
   'docker-icon.svg',
   'kubernetes-icon.svg',
   'raspberrypi-icon.svg',
+  '',
+  '',
+  '',
 ];
 
 const initTechs = (): TechType[] => {
