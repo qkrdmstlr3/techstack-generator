@@ -50,7 +50,7 @@
             height: 100px;
           }
           .js-cup {
-            fill: white;
+            fill: transparent;
             stroke: #0276C6;
           }
           .js-text {

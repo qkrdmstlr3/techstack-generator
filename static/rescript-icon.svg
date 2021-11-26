@@ -50,7 +50,7 @@
             height: 100px;
           }
           .js-cup {
-            fill: white;
+            fill: transparent;
             stroke: #E64F4E;
           }
           .re-text {
