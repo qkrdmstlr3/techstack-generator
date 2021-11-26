@@ -24,7 +24,6 @@
         transform: translate(-50%, -50%);
         width: 100px;
         height: 100px;
-        background: white;
       }
       .github {
         transform: scale(3) translate(4.7px, 4.7px);

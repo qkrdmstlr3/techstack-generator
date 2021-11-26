@@ -44,7 +44,6 @@
         transform: translate(-50%, -50%);
         width: 100px;
         height: 100px;
-        background: white;
       }
       .rotate {
         animation: rotate-ani 5s infinite;

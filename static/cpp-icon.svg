@@ -42,7 +42,6 @@
         transform: translate(-50%, -50%);
         width: 100px;
         height: 100px;
-        background: white;
       }
       .cpp-arc {
         stroke: #6195CB; 
