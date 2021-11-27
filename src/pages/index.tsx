@@ -23,6 +23,7 @@ const techsSrc: string[] = [
   'react-icon.svg',
   'redux-icon.svg',
   'gatsby-icon.svg',
+  'storybook-icon.svg',
   'webpack-icon.svg',
   'eslint-icon.svg',
   'prettier-icon.svg',
@@ -30,7 +31,6 @@ const techsSrc: string[] = [
   'docker-icon.svg',
   'kubernetes-icon.svg',
   'raspberrypi-icon.svg',
-  '',
   '',
   '',
 ];
