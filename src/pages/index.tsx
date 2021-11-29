@@ -30,8 +30,8 @@ const techsSrc: string[] = [
   'github-icon.svg',
   'docker-icon.svg',
   'kubernetes-icon.svg',
+  'aws-icon.svg',
   'raspberrypi-icon.svg',
-  '',
   '',
 ];
 
