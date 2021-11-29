@@ -27,12 +27,12 @@ const techsSrc: string[] = [
   'webpack-icon.svg',
   'eslint-icon.svg',
   'prettier-icon.svg',
+  'jest-icon.svg',
   'github-icon.svg',
   'docker-icon.svg',
   'kubernetes-icon.svg',
   'aws-icon.svg',
   'raspberrypi-icon.svg',
-  '',
 ];
 
 const initTechs = (): TechType[] => {
