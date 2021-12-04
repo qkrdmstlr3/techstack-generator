@@ -33,7 +33,10 @@ const techsSrc: string[] = [
   'docker-icon.svg',
   'kubernetes-icon.svg',
   'aws-icon.svg',
+  'nginx-icon.svg',
   'raspberrypi-icon.svg',
+  '',
+  '',
 ];
 
 const initTechs = (): TechType[] => {
