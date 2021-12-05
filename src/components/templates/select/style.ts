@@ -44,7 +44,7 @@ export const TechStackItem = styled.li`
 export const SettingButton = styled.button`
   width: 100%;
   height: 68px;
-  margin: 30px 5px 0 5px;
+  margin: 30px 0 0 0;
 
   border: none;
   border-radius: 4px;
