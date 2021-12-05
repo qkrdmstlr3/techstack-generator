@@ -36,7 +36,6 @@ const techsSrc: string[] = [
   'aws-icon.svg',
   'nginx-icon.svg',
   'raspberrypi-icon.svg',
-  '',
 ];
 
 const initTechs = (): TechType[] => {

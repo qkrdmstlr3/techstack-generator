@@ -26,9 +26,10 @@ export const Description = styled.p`
 export const TechStackList = styled.ul`
   padding: 0;
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   flex-wrap: wrap;
   list-style: none;
+  gap: 36px;
 `;
 
 export const TechStackItem = styled.li`
@@ -37,13 +38,13 @@ export const TechStackItem = styled.li`
   align-items: center;
   width: 100px;
   height: 100px;
-  margin: 0 5px 30px 5px;
+  /* margin: 0 5px 30px 5px; */
 `;
 
 export const SettingButton = styled.button`
   width: 100%;
   height: 68px;
-  margin: 0 5px;
+  margin: 30px 5px 0 5px;
 
   border: none;
   border-radius: 4px;
