@@ -18,8 +18,10 @@ interface ResultTemplateProps {
 
 function ResultTemplate({ setting, techs, changeTemplate }: ResultTemplateProps) {
   const selectedTechs = techs.filter((tech) => tech.selected).sort((a, b) => a.number - b.number);
-  const resultMarkdown = makeMarkdown({ setting, selectedTechs });
-  const resultHTML = makeHTML({ setting, selectedTechs });
+  const resultMarkdown = makeMarkdown({ setting, selectedTechs, forView: false });
+  const resultMarkdownForView = makeMarkdown({ setting, selectedTechs, forView: true });
+  const resultHTML = makeHTML({ setting, selectedTechs, forView: false });
+  const resultHTMLForView = makeHTML({ setting, selectedTechs, forView: true });
   const resultColNumber = Math.ceil(selectedTechs.length / setting.count);
   const resultHTMLHeight = resultColNumber * Number(setting.size) + (resultColNumber - 1) * Number(setting.interval);
   const resultMarkdownHeight = resultColNumber * Number(setting.size);
@@ -36,7 +38,7 @@ function ResultTemplate({ setting, techs, changeTemplate }: ResultTemplateProps)
               <CopyButton text={resultHTML} />
             </Style.CategoryTitleWrapper>
             <Style.CategoryResultContentWrapper contentHeight={resultHTMLHeight}>
-              <Style.CategoryResultContent dangerouslySetInnerHTML={{ __html: resultHTML }} />
+              <Style.CategoryResultContent dangerouslySetInnerHTML={{ __html: resultHTMLForView }} />
             </Style.CategoryResultContentWrapper>
           </Style.CategoryWrapper>
           <Style.CategoryWrapper>
@@ -53,7 +55,7 @@ function ResultTemplate({ setting, techs, changeTemplate }: ResultTemplateProps)
             </Style.CategoryTitleWrapper>
             <Style.CategoryResultContentWrapper contentHeight={resultMarkdownHeight}>
               <Style.MarkdownWrapper>
-                <ReactMarkdown rehypePlugins={[rehypeRaw]}>{resultMarkdown}</ReactMarkdown>
+                <ReactMarkdown rehypePlugins={[rehypeRaw]}>{resultMarkdownForView}</ReactMarkdown>
               </Style.MarkdownWrapper>
             </Style.CategoryResultContentWrapper>
           </Style.CategoryWrapper>

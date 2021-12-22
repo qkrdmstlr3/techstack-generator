@@ -13,7 +13,7 @@ export default {
 };
 
 const techs: TechType[] = new Array(20).fill(0).map((_, index) => ({
-  src: 'js-icon.svg',
+  src: 'https://techstack-generator.vercel.app/js-icon.svg',
   selected: true,
   number: index + 1,
 }));

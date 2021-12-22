@@ -4,10 +4,12 @@ import { SettingType } from '../components/templates/setting';
 interface MakeTemplateProps {
   setting: SettingType;
   selectedTechs: TechType[];
+  forView: boolean;
 }
 
-// TODO: Recursive
-export default ({ setting, selectedTechs }: MakeTemplateProps) => {
+// FIXME: 깔끔하게 고치기
+// TODO: Recursive / FP
+export default ({ setting, selectedTechs, forView }: MakeTemplateProps) => {
   const colNumber = Math.ceil(selectedTechs.length / setting.count);
   let html = '<div>';
   let i = 0;
@@ -22,7 +24,11 @@ export default ({ setting, selectedTechs }: MakeTemplateProps) => {
       const marginRight = isLastInRow ? 0 : setting.interval;
       const marginBottom = isLastRow ? 0 : setting.interval;
       const imgStyle = `style="width: ${setting.size}px; height: ${setting.size}px; margin-right: ${marginRight}px; margin-bottom: ${marginBottom}px;"`;
-      row += `<img src="https://techstack-generator.vercel.app/${selectedTechs[i].src}" alt="icon" ${imgStyle} />`;
+      if (forView) {
+        row += `<img src="${selectedTechs[i].src}" alt="icon" ${imgStyle} />`;
+      } else {
+        row += `<img src="https://techstack-generator.vercel.app/${selectedTechs[i].src}" alt="icon" ${imgStyle} />`;
+      }
       i = i + 1;
     }
     row += `</div>`;
