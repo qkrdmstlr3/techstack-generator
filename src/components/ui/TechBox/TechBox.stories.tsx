@@ -10,17 +10,17 @@ export default {
 
 const clickAction = action('onclick');
 
-const unselectedTech = { src: 'src', selected: false, number: 0 };
-const selectedTech = { src: 'src', selected: true, number: 1 };
+const unselectedTech = { src: 'https://techstack-generator.vercel.app/js-icon.svg', selected: false, number: 0 };
+const selectedTech = { src: 'https://techstack-generator.vercel.app/js-icon.svg', selected: true, number: 1 };
 export const techBox = (): React.ReactElement => (
   <StyleWrapper>
-    <div style={{ backgroundColor: 'black' }}>
-      <div className="description">not selected</div>
-      <TechBox tech={unselectedTech} clickTech={clickAction} />
+    <div className="description" style={{ color: '#fff' }}>
+      not selected
     </div>
-    <div>
-      <div className="description">selected</div>
-      <TechBox tech={selectedTech} clickTech={clickAction} />
+    <TechBox tech={unselectedTech} clickTech={clickAction} />
+    <div className="description" style={{ color: '#fff' }}>
+      selected
     </div>
+    <TechBox tech={selectedTech} clickTech={clickAction} />
   </StyleWrapper>
 );

@@ -12,9 +12,5 @@ export const settingSize = (): React.ReactElement => {
     setSize(size);
   };
 
-  return (
-    <div style={{ backgroundColor: 'black' }}>
-      <SettingSize size={size} changeSize={changeSize} />
-    </div>
-  );
+  return <SettingSize size={size} changeSize={changeSize} />;
 };

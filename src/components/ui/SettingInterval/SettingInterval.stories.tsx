@@ -12,9 +12,5 @@ export const settingInterval = (): React.ReactElement => {
     setInterval(interval);
   };
 
-  return (
-    <div style={{ backgroundColor: 'black' }}>
-      <SettingInterval interval={interval} changeInterval={changeInterval} />
-    </div>
-  );
+  return <SettingInterval interval={interval} changeInterval={changeInterval} />;
 };

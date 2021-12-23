@@ -13,9 +13,5 @@ export const settingResult = (): React.ReactElement => {
     setResults(results);
   };
 
-  return (
-    <div style={{ backgroundColor: 'black' }}>
-      <SettingResult results={results} changeResults={changeResults} />
-    </div>
-  );
+  return <SettingResult results={results} changeResults={changeResults} />;
 };

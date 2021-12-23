@@ -13,9 +13,5 @@ export const settingCount = (): React.ReactElement => {
     setCount(count);
   };
 
-  return (
-    <div style={{ backgroundColor: 'black' }}>
-      <SettingCount count={count} changeCount={changeCount} />
-    </div>
-  );
+  return <SettingCount count={count} changeCount={changeCount} />;
 };
