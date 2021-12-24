@@ -1,11 +1,12 @@
 import styled from '@emotion/styled';
+import color from '../../../style/color';
 
 export const Container = styled.main`
   margin: 0 auto;
   margin-top: 70px;
   padding-bottom: 150px;
   width: 510px;
-  color: #ffffff;
+  color: ${color.white};
   user-select: none;
 `;
 
@@ -44,7 +45,7 @@ export const BackButton = styled.button`
 
   border-radius: 4px;
   font-size: 32px;
-  background-color: #ffffff;
+  background-color: ${color.white};
   transition: all 0.5s;
   outline: none;
   border: none;
@@ -60,8 +61,8 @@ export const ResultButton = styled.button`
 
   border-radius: 4px;
   font-size: 32px;
-  color: #ffffff;
-  background-color: #00f703;
+  color: ${color.white};
+  background-color: ${color.green};
   transition: all 0.5s;
   outline: none;
   border: none;
@@ -80,5 +81,5 @@ export const Copyright = styled.p`
 `;
 
 export const ATag = styled.a`
-  border-bottom: 2px solid #00f703;
+  border-bottom: 2px solid ${color.green};
 `;

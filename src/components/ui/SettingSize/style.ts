@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import color from '../../../style/color';
 
 interface ExampleBoxProps {
   size: string;
@@ -18,7 +19,7 @@ export const Title = styled.h2`
   top: 0;
   left: 0;
 
-  color: #ffffff;
+  color: ${color.white};
   font-size: 24px;
   font-weight: 700;
 `;
@@ -26,7 +27,7 @@ export const Title = styled.h2`
 export const ExampleBox = styled.div<ExampleBoxProps>`
   width: ${(props) => `${props.size}px`};
   height: ${(props) => `${props.size}px`};
-  background-color: #ffffff;
+  background-color: ${color.white};
   border-radius: 4px;
 `;
 
@@ -36,7 +37,7 @@ export const Range = styled.input`
   margin-right: 60px;
   -webkit-appearance: none;
 
-  background-color: #ffffff;
+  background-color: ${color.white};
   outline: none;
   border: none;
 
@@ -45,14 +46,14 @@ export const Range = styled.input`
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background-color: #00f703;
+    background-color: ${color.green};
     cursor: pointer;
   }
   &::-moz-range-thumb {
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background-color: #00f703;
+    background-color: ${color.green};
     cursor: pointer;
     border: none;
   }

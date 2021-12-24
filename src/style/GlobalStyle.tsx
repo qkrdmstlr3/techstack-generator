@@ -1,5 +1,6 @@
 import React from 'react';
 import { Global, css } from '@emotion/react';
+import color from './color';
 
 function GlobalStyle(): React.ReactElement {
   return (
@@ -12,7 +13,7 @@ function GlobalStyle(): React.ReactElement {
         html,
         body {
           font-size: 62.5%;
-          background-color: #253237;
+          background-color: ${color.darkgray};
         }
         a {
           text-decoration: none;

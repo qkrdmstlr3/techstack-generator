@@ -1,11 +1,12 @@
 import styled from '@emotion/styled';
+import color from '../../../style/color';
 
 export const Container = styled.main`
   margin: 0 auto;
   margin-top: 70px;
   padding-bottom: 150px;
   width: 510px;
-  color: #ffffff;
+  color: ${color.white};
   user-select: none;
 `;
 
@@ -26,7 +27,6 @@ export const Description = styled.p`
 export const TechStackList = styled.ul`
   padding: 0;
   display: flex;
-  /* justify-content: space-between; */
   flex-wrap: wrap;
   list-style: none;
   gap: 36px;
@@ -38,7 +38,6 @@ export const TechStackItem = styled.li`
   align-items: center;
   width: 100px;
   height: 100px;
-  /* margin: 0 5px 30px 5px; */
 `;
 
 export const SettingButton = styled.button`
@@ -49,7 +48,7 @@ export const SettingButton = styled.button`
   border: none;
   border-radius: 4px;
   font-size: 32px;
-  background-color: #ffffff;
+  background-color: ${color.white};
   transition: all 0.5s;
   outline: none;
 
@@ -67,5 +66,5 @@ export const Copyright = styled.p`
 `;
 
 export const ATag = styled.a`
-  border-bottom: 2px solid #00f703;
+  border-bottom: 2px solid ${color.green};
 `;

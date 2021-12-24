@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import color from '../../../style/color';
 
 export const Container = styled.div`
   position: relative;
@@ -11,7 +12,7 @@ export const Title = styled.h2`
   top: 0;
   left: 0;
 
-  color: #ffffff;
+  color: ${color.white};
   font-size: 24px;
   font-weight: 700;
 `;
@@ -22,7 +23,7 @@ export const Wrapper = styled.div`
   margin: 0 auto;
   padding-top: 20px;
   width: 170px;
-  color: #ffffff;
+  color: ${color.white};
 `;
 
 export const Opperation = styled.button`
@@ -30,9 +31,9 @@ export const Opperation = styled.button`
   justify-content: center;
   align-items: center;
 
-  background-color: transparent;
+  background-color: ${color.none};
   border: none;
-  color: #ffffff;
+  color: ${color.white};
   font-size: 48px;
   cursor: pointer;
 `;

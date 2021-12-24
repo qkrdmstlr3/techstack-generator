@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import color from '../../../style/color';
 
 interface SelectedProps {
   selected: boolean;
@@ -22,7 +23,7 @@ export const ImageWrapper = styled.div<SelectedProps>`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #ffffff;
+  background-color: ${color.white};
   border-radius: 4px;
   opacity: ${(props) => (props.selected ? '0.7' : '1')};
 `;
@@ -46,11 +47,11 @@ export const NumberWrapper = styled.div`
 
   font-size: 24px;
   border-radius: 25px;
-  background-color: #00f703;
+  background-color: ${color.green};
 `;
 
 export const Number = styled.span`
-  color: #ffffff;
+  color: ${color.white};
   font-weight: bold;
   user-select: none;
 `;

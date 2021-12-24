@@ -1,11 +1,12 @@
 import styled from '@emotion/styled';
+import color from '../../../style/color';
 
 export const Container = styled.main`
   margin: 0 auto;
   margin-top: 70px;
   padding-bottom: 150px;
   width: 510px;
-  color: #ffffff;
+  color: ${color.white};
   user-select: none;
 `;
 
@@ -34,7 +35,7 @@ export const CategoryTitleWrapper = styled.div`
 
 export const CategoryTitle = styled.h2`
   margin: 13px 15px 10px 0;
-  color: #00f703;
+  color: ${color.green};
   font-size: 24px;
   font-weight: 700;
 `;
@@ -49,7 +50,7 @@ export const CategoryResultContentWrapper = styled.div`
 export const CategoryResultContent = styled.div`
   width: fit-content;
   border-radius: 4px;
-  background-color: #ffffff;
+  background-color: ${color.white};
 `;
 
 export const CategoryContent = styled.div`
@@ -60,8 +61,8 @@ export const CategoryContent = styled.div`
   font-size: 13px;
   overflow-y: scroll;
   border-radius: 4px;
-  color: #000000;
-  background-color: #ffffff;
+  color: ${color.black};
+  background-color: ${color.white};
 
   > div {
     width: fit-content;
@@ -74,7 +75,7 @@ export const BackButton = styled.button`
 
   border-radius: 4px;
   font-size: 32px;
-  background-color: #ffffff;
+  background-color: ${color.white};
   transition: all 0.5s;
   outline: none;
   border: none;
@@ -93,5 +94,5 @@ export const Copyright = styled.p`
 `;
 
 export const ATag = styled.a`
-  border-bottom: 2px solid #00f703;
+  border-bottom: 2px solid ${color.green};
 `;

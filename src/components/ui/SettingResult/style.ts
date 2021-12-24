@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import color from '../../../style/color';
 
 export const Container = styled.div`
   padding-top: 20px;
@@ -16,7 +17,7 @@ export const Title = styled.h2`
   top: 0;
   left: 0;
 
-  color: #ffffff;
+  color: ${color.white};
   font-size: 24px;
   font-weight: 700;
 `;
@@ -36,7 +37,7 @@ export const CheckBox = styled.div`
   align-items: center;
   margin-right: 20px;
 
-  background-color: #ffffff;
+  background-color: ${color.white};
   border-radius: 4px;
 `;
 
@@ -44,11 +45,11 @@ export const Check = styled.div`
   width: 20px;
   height: 20px;
 
-  background-color: #00f703;
+  background-color: ${color.green};
   border-radius: 4px;
 `;
 
 export const CheckTitle = styled.span`
-  color: #ffffff;
+  color: ${color.white};
   font-size: 24px;
 `;

@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import color from '../../../style/color';
 
 interface LineProps {
   width: string;
@@ -30,8 +31,8 @@ export const ToolTip = styled.div`
   visibility: hidden;
   padding: 5px;
   width: 160px;
-  background-color: black;
-  color: #00f703;
+  background-color: ${color.black};
+  color: ${color.green};
   text-align: center;
   border-radius: 6px;
   font-size: 18px;
@@ -43,7 +44,7 @@ export const Title = styled.h2`
   top: 0;
   left: 0;
 
-  color: #ffffff;
+  color: ${color.white};
   font-size: 24px;
   font-weight: 700;
 `;
@@ -60,12 +61,12 @@ export const Bar = styled.div`
   width: 8px;
   height: 60px;
   border-radius: 4px;
-  background-color: #ffffff;
+  background-color: ${color.white};
 `;
 
 export const Line = styled.div<LineProps>`
   width: ${(props) => props.width}px;
-  border: 1px dashed #ffffff;
+  border: 1px dashed ${color.white};
 `;
 
 export const Range = styled.input`
@@ -74,7 +75,7 @@ export const Range = styled.input`
   margin-right: 60px;
   -webkit-appearance: none;
 
-  background-color: #ffffff;
+  background-color: ${color.white};
   outline: none;
   border: none;
 
@@ -83,14 +84,14 @@ export const Range = styled.input`
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background-color: #00f703;
+    background-color: ${color.green};
     cursor: pointer;
   }
   &::-moz-range-thumb {
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background-color: #00f703;
+    background-color: ${color.green};
     cursor: pointer;
     border: none;
   }
