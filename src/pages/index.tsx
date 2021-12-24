@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import SelectTemplate, { TechType } from '../components/templates/select';
 import SettingTemplate from '../components/templates/setting/index';
 import GlobalStyle from '../style/GlobalStyle';
@@ -47,13 +47,18 @@ const IndexPage = () => {
   const [techs, setTechs] = useState<TechType[]>(initTechs());
   const [selectedCount, setSelectedCount] = useState<number>(0);
   const [currentTemplate, setCurrentTemplate] = useState<TemplateType>(TemplateType.select);
-
   const [setting, setSetting] = useState({
     size: '65',
     count: 1,
     interval: '50',
     results: [ResultType.html, ResultType.markdown],
   });
+
+  useEffect(() => {
+    if (selectedCount && setting.count - 1 == selectedCount) {
+      setSetting({ ...setting, count: selectedCount });
+    }
+  }, [selectedCount]);
 
   const selectTech = (selectedTech: TechType) => {
     if (!selectedTech.src) {
