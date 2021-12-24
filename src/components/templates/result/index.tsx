@@ -9,6 +9,7 @@ import * as Style from './style';
 import makeHTML from '../../../utils/makeHTML';
 import makeMarkdown from '../../../utils/makeMarkdown';
 import CopyButton from '../../ui/CopyButton';
+import { pipe, filter, sort } from '@fxts/core';
 
 interface ResultTemplateProps {
   setting: SettingType;
@@ -17,14 +18,15 @@ interface ResultTemplateProps {
 }
 
 function ResultTemplate({ setting, techs, changeTemplate }: ResultTemplateProps) {
-  const selectedTechs = techs.filter((tech) => tech.selected).sort((a, b) => a.number - b.number);
+  const selectedTechs = pipe(
+    techs,
+    filter((tech) => tech.selected),
+    sort((a, b) => a.number - b.number)
+  );
   const resultMarkdown = makeMarkdown({ setting, selectedTechs, forView: false });
   const resultMarkdownForView = makeMarkdown({ setting, selectedTechs, forView: true });
   const resultHTML = makeHTML({ setting, selectedTechs, forView: false });
   const resultHTMLForView = makeHTML({ setting, selectedTechs, forView: true });
-  const resultColNumber = Math.ceil(selectedTechs.length / setting.count);
-  const resultHTMLHeight = resultColNumber * Number(setting.size) + (resultColNumber - 1) * Number(setting.interval);
-  const resultMarkdownHeight = resultColNumber * Number(setting.size);
 
   return (
     <Style.Container>
@@ -37,7 +39,7 @@ function ResultTemplate({ setting, techs, changeTemplate }: ResultTemplateProps)
               <Style.CategoryTitle>HTML RESULT</Style.CategoryTitle>
               <CopyButton text={resultHTML} />
             </Style.CategoryTitleWrapper>
-            <Style.CategoryResultContentWrapper contentHeight={resultHTMLHeight}>
+            <Style.CategoryResultContentWrapper>
               <Style.CategoryResultContent dangerouslySetInnerHTML={{ __html: resultHTMLForView }} />
             </Style.CategoryResultContentWrapper>
           </Style.CategoryWrapper>
@@ -53,10 +55,10 @@ function ResultTemplate({ setting, techs, changeTemplate }: ResultTemplateProps)
               <Style.CategoryTitle>MARKDOWN RESULT</Style.CategoryTitle>
               <CopyButton text={resultMarkdown} />
             </Style.CategoryTitleWrapper>
-            <Style.CategoryResultContentWrapper contentHeight={resultMarkdownHeight}>
-              <Style.MarkdownWrapper>
+            <Style.CategoryResultContentWrapper>
+              <Style.CategoryResultContent>
                 <ReactMarkdown rehypePlugins={[rehypeRaw]}>{resultMarkdownForView}</ReactMarkdown>
-              </Style.MarkdownWrapper>
+              </Style.CategoryResultContent>
             </Style.CategoryResultContentWrapper>
           </Style.CategoryWrapper>
           <Style.CategoryWrapper>

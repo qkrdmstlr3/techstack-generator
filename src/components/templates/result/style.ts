@@ -1,9 +1,5 @@
 import styled from '@emotion/styled';
 
-interface CategoryContentProps {
-  contentHeight?: number;
-}
-
 export const Container = styled.main`
   margin: 0 auto;
   margin-top: 70px;
@@ -43,30 +39,15 @@ export const CategoryTitle = styled.h2`
   font-weight: 700;
 `;
 
-export const CategoryResultContentWrapper = styled.div<CategoryContentProps>`
+export const CategoryResultContentWrapper = styled.div`
   position: relative;
-  height: ${(props) => (props.contentHeight ? props.contentHeight : 'auto')}px;
   border-radius: 4px;
+  display: flex;
+  justify-content: center;
 `;
 
 export const CategoryResultContent = styled.div`
-  padding: 0 5px;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-
-  border-radius: 4px;
-  background-color: #ffffff;
-`;
-
-export const MarkdownWrapper = styled.div`
   width: fit-content;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-
   border-radius: 4px;
   background-color: #ffffff;
 `;
