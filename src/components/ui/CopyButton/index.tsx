@@ -22,7 +22,7 @@ function CopyButton({ text }: CopyButtonProps) {
   };
 
   return (
-    <Style.IconWrapper onClick={() => copyToClipboard(text)}>
+    <Style.IconWrapper aria-label="copy-button" onClick={() => copyToClipboard(text)}>
       {iconType === 'copy' ? <Copy /> : <Check />}
     </Style.IconWrapper>
   );
