@@ -16,9 +16,17 @@ const setting: SettingType = {
 };
 
 describe('Utils/makeMarkdown', () => {
-  it('test result', () => {
-    const result = makeMarkdown({ setting, selectedTechs });
+  it('forview is true', () => {
+    const markdown = makeMarkdown({ setting, selectedTechs, forView: true });
 
-    expect(result).not.toBeNull();
+    expect(markdown).not.toBeNull();
+    expect(markdown).not.toContain('https://techstack-generator.vercel.app/');
+  });
+
+  it('forview is false', () => {
+    const markdown = makeMarkdown({ setting, selectedTechs, forView: false });
+
+    expect(markdown).not.toBeNull();
+    expect(markdown).toContain('https://techstack-generator.vercel.app/');
   });
 });

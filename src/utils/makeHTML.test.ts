@@ -16,9 +16,17 @@ const setting: SettingType = {
 };
 
 describe('Utils/makeHTML', () => {
-  it('test result', () => {
-    const result = makeHTML({ setting, selectedTechs });
+  it('forview is true', () => {
+    const html = makeHTML({ setting, selectedTechs, forView: true });
 
-    expect(result).not.toBeNull();
+    expect(html).not.toBeNull();
+    expect(html).not.toContain('https://techstack-generator.vercel.app/');
+  });
+
+  it('forview is false', () => {
+    const html = makeHTML({ setting, selectedTechs, forView: false });
+
+    expect(html).not.toBeNull();
+    expect(html).toContain('https://techstack-generator.vercel.app/');
   });
 });
