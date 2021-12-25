@@ -16,7 +16,7 @@ export interface SettingType {
 interface SettingTemplateProps {
   setting: SettingType;
   selectedCount: number;
-  changeSetting: (key: string, value: any) => void;
+  changeSetting: (key: string, value: string | number | ResultType[]) => void;
   changeTemplate: (isBackButton?: boolean) => void;
 }
 
@@ -26,7 +26,7 @@ function SettingTemplate({ setting, selectedCount, changeSetting, changeTemplate
   };
 
   const changeCount = (count: number) => {
-    changeSetting('count', count < 1 ? 1 : Math.min(count, selectedCount));
+    changeSetting('count', count < 1 ? 1 : Math.min(count, selectedCount || 1));
   };
 
   const changeInterval = (interval: string) => {

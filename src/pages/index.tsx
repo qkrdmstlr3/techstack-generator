@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import SelectTemplate, { TechType } from '../components/templates/select';
-import SettingTemplate from '../components/templates/setting/index';
+import SettingTemplate, { SettingType } from '../components/templates/setting/index';
 import GlobalStyle from '../style/GlobalStyle';
 import { ResultType } from '../components/ui/SettingResult/index';
 import ResultTemplate from '../components/templates/result/index';
@@ -47,7 +47,7 @@ const IndexPage = () => {
   const [techs, setTechs] = useState<TechType[]>(initTechs());
   const [selectedCount, setSelectedCount] = useState<number>(0);
   const [currentTemplate, setCurrentTemplate] = useState<TemplateType>(TemplateType.select);
-  const [setting, setSetting] = useState({
+  const [setting, setSetting] = useState<SettingType>({
     size: '65',
     count: 1,
     interval: '50',
@@ -94,7 +94,7 @@ const IndexPage = () => {
     }
   };
 
-  const changeSetting = (key: string, value: any) => {
+  const changeSetting = (key: string, value: string | number | ResultType[]) => {
     setSetting({ ...setting, [key]: value });
   };
 

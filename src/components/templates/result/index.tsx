@@ -28,6 +28,7 @@ function ResultTemplate({ setting, techs, changeTemplate }: ResultTemplateProps)
   const resultHTML = makeHTML({ setting, selectedTechs, forView: false });
   const resultHTMLForView = makeHTML({ setting, selectedTechs, forView: true });
 
+  // TODO: 중복 제거
   return (
     <Style.Container>
       <Style.Title>TSG</Style.Title>
