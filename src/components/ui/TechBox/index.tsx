@@ -11,7 +11,7 @@ function TechBox({ tech, clickTech }: TechBoxProps) {
   return (
     <Style.Wrapper aria-label="techbox" selected={tech.selected} onClick={() => clickTech(tech)}>
       <Style.ImageWrapper selected={tech.selected}>
-        {tech.src && <Style.Image src={tech.src} alt="icon" />}
+        <Style.Image src={tech.src} alt="icon" />
       </Style.ImageWrapper>
       {tech.selected && (
         <Style.NumberWrapper>

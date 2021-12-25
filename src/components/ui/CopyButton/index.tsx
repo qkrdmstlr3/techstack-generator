@@ -11,6 +11,7 @@ interface CopyButtonProps {
 
 function CopyButton({ text }: CopyButtonProps) {
   const [iconType, setIconType] = useState<IconType>('copy');
+
   const copyToClipboard = (value: string) => {
     if (iconType !== 'copy') return;
     navigator.clipboard.writeText(value);

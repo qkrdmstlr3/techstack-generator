@@ -1,4 +1,5 @@
 import React from 'react';
+import { map, pipe, toArray } from '@fxts/core';
 import TechBox from '../../ui/TechBox';
 import * as Style from './style';
 
@@ -20,11 +21,15 @@ function SelectTemplate({ techs, selectTech, changeTemplate }: SelectTemplatePro
       <Style.Title>TSG</Style.Title>
       <Style.Description>animated TechStack Generator</Style.Description>
       <Style.TechStackList>
-        {techs.map((tech) => (
-          <Style.TechStackItem key={tech.src}>
-            <TechBox tech={tech} clickTech={selectTech} />
-          </Style.TechStackItem>
-        ))}
+        {pipe(
+          techs,
+          map((tech) => (
+            <Style.TechStackItem key={tech.src}>
+              <TechBox tech={tech} clickTech={selectTech} />
+            </Style.TechStackItem>
+          )),
+          toArray
+        )}
       </Style.TechStackList>
       <Style.SettingButton onClick={changeTemplate}>SETTING</Style.SettingButton>
       <Style.Copyright>

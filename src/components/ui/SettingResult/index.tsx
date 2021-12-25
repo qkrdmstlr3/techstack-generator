@@ -1,5 +1,6 @@
 import React from 'react';
 import * as Style from './style';
+import { reverse } from '../../../utils/fp';
 
 export enum ResultType {
   html = 'HTML',
@@ -13,12 +14,7 @@ interface SettingResultProps {
 
 function SettingResult({ results, changeResults }: SettingResultProps) {
   const clickCheckBox = (selectedResult: ResultType) => {
-    const existIndex = results.findIndex((result) => result === selectedResult);
-    if (existIndex < 0) {
-      changeResults([...results, selectedResult]);
-      return;
-    }
-    changeResults(results.filter((result) => result !== selectedResult));
+    changeResults(reverse(selectedResult, results));
   };
 
   return (
