@@ -61,21 +61,18 @@ const IndexPage = () => {
   }, [selectedCount]);
 
   const selectTech = (selectedTech: TechType) => {
-    if (!selectedTech.src) {
-      return;
-    }
     const updatedTechs = techs.map((tech) => {
       if (tech.number > selectedTech.number && selectedTech.number !== 0) {
         tech.number -= 1;
       }
       return tech;
     });
+
     const selectedTechInList = updatedTechs.find((tech) => tech.src === selectedTech.src);
-
-    selectedTechInList.number = selectedTechInList.selected ? 0 : selectedCount + 1;
-    setSelectedCount(selectedTechInList.selected ? selectedCount - 1 : selectedCount + 1);
     selectedTechInList.selected = !selectedTechInList.selected;
+    selectedTechInList.number = selectedTechInList.selected ? selectedCount + 1 : 0;
 
+    setSelectedCount(selectedTechInList.selected ? selectedCount + 1 : selectedCount - 1);
     setTechs(updatedTechs);
   };
 
@@ -98,29 +95,27 @@ const IndexPage = () => {
     setSetting({ ...setting, [key]: value });
   };
 
-  const templateComponent = () => {
-    switch (currentTemplate) {
-      case TemplateType.select:
-        return <SelectTemplate techs={techs} selectTech={selectTech} changeTemplate={changeTemplate} />;
-      case TemplateType.setting:
-        return (
-          <SettingTemplate
-            setting={setting}
-            selectedCount={selectedCount}
-            changeSetting={changeSetting}
-            changeTemplate={changeTemplate}
-          />
-        );
-      case TemplateType.result:
-        return <ResultTemplate setting={setting} techs={techs} changeTemplate={changeTemplate} />;
-    }
-  };
-
   return (
     <>
       <SEO />
       <GlobalStyle />
-      {templateComponent()}
+      {(() => {
+        switch (currentTemplate) {
+          case TemplateType.select:
+            return <SelectTemplate techs={techs} selectTech={selectTech} changeTemplate={changeTemplate} />;
+          case TemplateType.result:
+            return <ResultTemplate setting={setting} techs={techs} changeTemplate={changeTemplate} />;
+          case TemplateType.setting:
+            return (
+              <SettingTemplate
+                setting={setting}
+                selectedCount={selectedCount}
+                changeSetting={changeSetting}
+                changeTemplate={changeTemplate}
+              />
+            );
+        }
+      })()}
     </>
   );
 };
