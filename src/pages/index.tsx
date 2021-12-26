@@ -51,7 +51,7 @@ const IndexPage = () => {
     size: '65',
     count: 1,
     interval: '50',
-    results: [ResultType.html, ResultType.markdown],
+    results: [ResultType.markdown],
   });
 
   useEffect(() => {
