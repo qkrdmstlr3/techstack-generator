@@ -36,6 +36,7 @@ const techsSrc: string[] = [
   'kubernetes-icon.svg',
   'aws-icon.svg',
   'nginx-icon.svg',
+  'mysql-icon.svg',
   'raspberrypi-icon.svg',
 ];
 
