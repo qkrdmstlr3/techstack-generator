@@ -29,7 +29,6 @@ const techsSrc: string[] = [
   'prettier-icon.svg',
   'jest-icon.svg',
   'testinglibrary-icon.svg',
-  'python-icon.svg',
   'django-icon.svg',
   'graphql-icon.svg',
   'restapi-icon.svg',
