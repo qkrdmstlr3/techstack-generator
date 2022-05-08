@@ -40,6 +40,7 @@ const techsSrc: string[] = [
   'nginx-icon.svg',
   'mysql-icon.svg',
   'raspberrypi-icon.svg',
+  'java-icon.svg',
 ];
 
 const initTechs = (): TechType[] => {
