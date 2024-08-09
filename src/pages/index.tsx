@@ -72,12 +72,14 @@ const IndexPage = () => {
       }
       return tech;
     });
-
+  
     const selectedTechInList = updatedTechs.find((tech) => tech.src === selectedTech.src);
-    selectedTechInList.selected = !selectedTechInList.selected;
-    selectedTechInList.number = selectedTechInList.selected ? selectedCount + 1 : 0;
-
-    setSelectedCount(selectedTechInList.selected ? selectedCount + 1 : selectedCount - 1);
+    if (selectedTechInList) {
+      selectedTechInList.selected = !selectedTechInList.selected;
+      selectedTechInList.number = selectedTechInList.selected ? selectedCount + 1 : 0;
+    }
+  
+    setSelectedCount(selectedTechInList?.selected ? selectedCount + 1 : selectedCount - 1);
     setTechs(updatedTechs);
   };
 
