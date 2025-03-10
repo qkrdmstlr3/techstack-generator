@@ -41,6 +41,26 @@ const techsSrc: string[] = [
   'mysql-icon.svg',
   'raspberrypi-icon.svg',
   'java-icon.svg',
+  'terraform-icon.svg',
+  'ansible-icon.svg',
+  'argocd-icon.svg',
+  'azure-icon.svg',
+  'bash-icon.svg',
+  'bitbucket-icon.svg',
+  'confluence-icon.svg',
+  'gcp-icon.svg',
+  'git-icon.svg',
+  'gitlab-icon.svg',
+  'gafana-icon.svg',
+  'helm-icon.svg',
+  'jenkins-icon.svg',
+  'jira-icon.svg',
+  'kafka-icon.svg',
+  'linux-icon.svg',
+  'prometheus-icon.svg',
+  'redis-icon.svg',
+  'splunk-icon.svg',
+  'vault-icon.svg'
 ];
 
 const initTechs = (): TechType[] => {
